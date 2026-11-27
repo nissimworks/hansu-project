@@ -1,0 +1,1712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Startup Support Navigator | 부산 창업지원 내비게이터</title>
+<meta name="description" content="Find the Busan and Korean startup programs you are actually eligible for. Free, no login, no data collected.">
+<style>
+:root{--navy:#2E7D6E;--navy2:#3C8A7B;--amber:#A03A5F;--amber-l:#F6E4EA;--cream:#FBF5E9;--ink:#1C1B1A;
+--muted:#5E5751;--teal:#2E6E6A;--line:#E4DAC6;--white:#fff;--ok:#2E6E6A;--soon:#B4762A}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);
+font-family:"Pretendard","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",-apple-system,"Segoe UI",Roboto,sans-serif;
+font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;padding:18px 0 14px;position:relative;overflow:hidden}
+header:after{content:"";position:absolute;right:-70px;top:-90px;width:260px;height:260px;border-radius:50%;background:#256C5F}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:2}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{width:34px;height:34px;border-radius:50%;background:#fff;padding:1px}
+.brand b{font-family:"Nanum Myeongjo","Noto Serif KR",Georgia,serif;font-size:17px;font-weight:700;letter-spacing:.01em}
+.brand span{display:block;font-size:10.5px;color:var(--amber);letter-spacing:.16em;font-weight:700}
+.lang{display:flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden}
+.lang button{background:transparent;border:0;color:#EAF3EF;font:inherit;font-size:12.5px;padding:6px 12px;cursor:pointer}
+.lang button.on{background:#fff;color:var(--navy);font-weight:700}
+.intro{padding:30px 0 8px}
+.intro h1{font-family:"Nanum Myeongjo","Noto Serif KR",Georgia,serif;font-size:clamp(25px,4.4vw,36px);line-height:1.24;margin:0 0 8px;color:var(--navy)}
+.intro p{margin:0;color:var(--muted);max-width:720px}
+.form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 20px 8px;margin:20px 0 8px;
+box-shadow:0 4px 24px rgba(14,42,71,.06)}
+.fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 18px}
+.field{min-width:0}
+.field.full{grid-column:1/-1}
+label.lbl{display:block;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);margin-bottom:6px}
+select,input[type=number]{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;
+font:inherit;font-size:14.5px;color:var(--ink)}
+select:focus,input:focus{outline:2px solid var(--amber);outline-offset:1px}
+.stages{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.stage{border:1px solid var(--line);border-radius:12px;padding:10px 10px 9px;cursor:pointer;background:#FCFAF4;transition:.15s}
+.stage:hover{border-color:var(--navy2)}
+.stage input{position:absolute;opacity:0;pointer-events:none}
+.stage .t{font-weight:700;font-size:13px;color:var(--navy);display:block}
+.stage .s{font-size:11px;color:var(--muted);display:block;margin-top:2px;line-height:1.35}
+.stage.sel{border-color:var(--amber);background:#FFF9EF;box-shadow:inset 0 0 0 1px var(--amber)}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:13px;color:var(--muted);margin-top:4px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:16px 0 4px}
+.btn{font:inherit;font-weight:700;font-size:14px;border-radius:999px;padding:10px 18px;cursor:pointer;border:1px solid var(--navy);background:var(--navy);color:#fff}
+.btn.ghost{background:transparent;color:var(--navy)}
+.btn:hover{opacity:.92}
+.count{font-size:13px;color:var(--muted);margin-left:auto}
+.results{padding:6px 0 40px}
+.grouphead{display:flex;align-items:center;gap:10px;margin:26px 0 10px}
+.grouphead h2{font-family:"Nanum Myeongjo",Georgia,serif;font-size:20px;color:var(--navy);margin:0}
+.pill{font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:999px;background:var(--amber-l);color:#7A2A45}
+.pill.green{background:#DCEDE7;color:#255F54}
+.cards{display:grid;grid-template-columns:1fr;gap:12px}
+.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;position:relative}
+.card.top{border-left:4px solid var(--ok)}
+.card.soon{border-left:4px solid var(--soon);background:#FFFCF6}
+.chead{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+.chead h3{margin:0;font-size:16.5px;color:var(--navy);line-height:1.35}
+.org{font-size:12px;color:var(--muted);margin-top:2px}
+.amount{font-family:"Nanum Myeongjo",Georgia,serif;font-size:16px;font-weight:700;color:var(--teal);white-space:nowrap}
+.tag{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:.05em;padding:2.5px 8px;border-radius:999px;background:#DCEDE7;color:var(--navy);margin-right:5px}
+.tag.b{background:var(--amber-l);color:#7A2A45}
+.chips{margin:9px 0 0}
+.why{margin:9px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.why li{font-size:11.5px;background:#EFF6F3;border-radius:999px;padding:3px 9px;color:#255F54}
+.why li.warn{background:#F6E4EA;color:#7A2A45}
+.detail{margin:10px 0 0;font-size:13.5px}
+.detail ul{margin:6px 0 0;padding-left:18px}
+.detail li{margin:2px 0}
+.meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:8px 14px;margin:10px 0 0;font-size:12.3px;color:var(--muted)}
+.meta div b{color:var(--ink);font-weight:700}
+.links{margin-top:10px;display:flex;gap:12px;flex-wrap:wrap;font-size:13px}
+.links a{color:var(--teal);font-weight:700;text-decoration:none;border-bottom:1px solid rgba(46,110,106,.35)}
+.note{font-size:12px;color:var(--muted);margin-top:8px}
+.empty{background:#fff;border:1px dashed var(--line);border-radius:16px;padding:26px;text-align:center;color:var(--muted)}
+.cta{background:var(--navy);color:#fff;border-radius:18px;padding:22px 24px;margin:26px 0 0}
+.cta h3{font-family:"Nanum Myeongjo",Georgia,serif;margin:0 0 6px;font-size:19px}
+.cta p{margin:0;color:#EAF3EF;font-size:13.5px}
+.cta a{color:var(--amber);font-weight:700;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:18px 0 34px;font-size:11.5px;color:var(--muted)}
+.hidden{display:none!important}
+@media (max-width:760px){
+  .fgrid{grid-template-columns:1fr}
+  .stages{grid-template-columns:repeat(2,1fr)}
+  .count{margin-left:0;width:100%}
+  .amount{font-size:15px}
+}
+@media print{
+  header,.form,.cta,.actions{display:none!important}
+  body{background:#fff}.card{break-inside:avoid}
+}
+</style>
+
+<style id="hansu-site-chrome">
+.hansu-back{background:#255F54;color:#DCEBE5;font-size:13px;line-height:1.4}
+.hansu-back .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 18px;flex-wrap:wrap;padding-top:9px;padding-bottom:9px}
+.hansu-back a{color:#fff;font-weight:700;text-decoration:none}
+.hansu-back a:hover{color:#C8D96F}
+.hansu-back span{color:#BBD3CA}
+</style>
+<link rel="icon" href="assets/hansu-logo-64.png" sizes="64x64" type="image/png">
+<link rel="apple-touch-icon" href="assets/hansu-logo-tile.png">
+<link rel="canonical" href="https://nissimworks.github.io/hansu-project/navigator.html">
+<meta property="og:image" content="https://nissimworks.github.io/hansu-project/assets/og-cover.jpg">
+</head>
+<body>
+<div class="hansu-back"><div class="wrap">
+  <a href="index.html">&#8592; 한수 프로젝트 · Hansu Project</a>
+  <span>부산 창업지원 내비게이터 · Startup Support Navigator</span>
+</div></div>
+
+<header><div class="wrap hrow">
+  <div class="brand"><img src="data:image/png;base64,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" alt=""><div><b>한수 프로젝트</b><span id="brandSub">STARTUP SUPPORT NAVIGATOR</span></div></div>
+  <div class="lang"><button id="enBtn" class="on" onclick="setLang('en')">EN</button><button id="koBtn" onclick="setLang('ko')">한국어</button></div>
+</div></header>
+
+<main class="wrap">
+  <section class="intro">
+    <h1 id="h1"></h1>
+    <p id="sub"></p>
+  </section>
+
+  <section class="form" id="form">
+    <div class="fgrid">
+      <div class="field full">
+        <label class="lbl" id="lblStage"></label>
+        <div class="stages" id="stageBox"></div>
+      </div>
+      <div class="field">
+        <label class="lbl" for="age" id="lblAge"></label>
+        <input type="number" id="age" min="16" max="85" value="32" inputmode="numeric">
+      </div>
+      <div class="field">
+        <label class="lbl" for="loc" id="lblLoc"></label>
+        <select id="loc"></select>
+      </div>
+      <div class="field" id="distField">
+        <label class="lbl" for="dist" id="lblDist"></label>
+        <select id="dist"></select>
+      </div>
+      <div class="field">
+        <label class="lbl" for="status" id="lblStatus"></label>
+        <select id="status"></select>
+      </div>
+      <div class="field">
+        <label class="lbl" for="ind" id="lblInd"></label>
+        <select id="ind"></select>
+      </div>
+      <div class="field full">
+        <label class="check"><input type="checkbox" id="woman"> <span id="lblWoman"></span></label>
+        <label class="check"><input type="checkbox" id="student"> <span id="lblStudent"></span></label>
+        <label class="check"><input type="checkbox" id="restart"> <span id="lblRestart"></span></label>
+      </div>
+    </div>
+    <div class="actions">
+      <button class="btn" onclick="run()" id="btnRun"></button>
+      <button class="btn ghost" onclick="resetAll()" id="btnReset"></button>
+      <button class="btn ghost" onclick="window.print()" id="btnPrint"></button>
+      <span class="count" id="count"></span>
+    </div>
+  </section>
+
+  <section class="results" id="results"></section>
+
+  <section class="cta">
+    <h3 id="ctaTitle"></h3>
+    <p id="ctaText"></p>
+  </section>
+</main>
+
+<footer><div class="wrap" id="foot"></div></footer>
+
+<script>
+const PROGRAMS = [
+ {
+  "id": "bunicorn-seed",
+  "tier": "busan",
+  "name_ko": "부니콘 씨드 육성사업 (부산 예비창업패키지)",
+  "name_en": "Bunicorn Seed (Busan Pre-Startup Package)",
+  "org_ko": "부산기술창업투자원 (BSIA)",
+  "org_en": "Busan Startup Investment Agency (BSIA)",
+  "stages": [
+   "idea"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "기본 500만 원, 최대 2,000만 원",
+  "amount_en": "KRW 5M base, up to KRW 20M",
+  "support_ko": [
+   "사업화 자금 (재료비, 외주 용역비 등)",
+   "티움 등 입주 공간",
+   "기초·심화 창업 교육",
+   "전문가 1대1 컨설팅",
+   "AC·투자자 연계 IR"
+  ],
+  "support_en": [
+   "Commercialization funding (materials, outsourced work)",
+   "Office space at 티움 and partner centers",
+   "Basic and advanced startup training",
+   "One-to-one expert consulting",
+   "IR support with accelerators and investors"
+  ],
+  "apply_ko": "부산창업포털(busanstartup.kr) 온라인 접수",
+  "apply_en": "Apply online at busanstartup.kr",
+  "window_ko": "매년 2월 공고, 3~4월 선정, 4~11월 운영",
+  "window_en": "Announced each February, selection March to April, program April to November",
+  "url": "https://www.bsia.or.kr/supports/29?mcode=biz013",
+  "contact": "BSIA 051-715-1798",
+  "note_ko": "부산 소재 기술기반 예비창업자 대상, 50팀 내외.",
+  "note_en": "For technology-based pre-founders based in Busan, about 50 teams."
+ },
+ {
+  "id": "bunicorn-build",
+  "tier": "busan",
+  "name_ko": "부니콘 빌드 육성사업 (부산 초기창업패키지)",
+  "name_en": "Bunicorn Build (Busan Early-Stage Package)",
+  "org_ko": "부산기술창업투자원 (BSIA)",
+  "org_en": "Busan Startup Investment Agency (BSIA)",
+  "stages": [
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "기본 1,000만 원, 최대 4,500만 원 (창업특례자금 최대 5,000만 원 연계)",
+  "amount_en": "KRW 10M base, up to KRW 45M, plus a linked special guarantee up to KRW 50M",
+  "support_ko": [
+   "사업화 자금",
+   "기업 진단 및 현장 코칭",
+   "티움 등 입주 공간 연계",
+   "투자 멘토링·컨설팅·투자사 미팅",
+   "창업특례자금 연계"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Company diagnosis and on-site coaching",
+   "Linked office space at 티움",
+   "Investment mentoring, consulting and investor meetings",
+   "Linked startup special guarantee"
+  ],
+  "apply_ko": "부산창업포털 온라인 접수",
+  "apply_en": "Apply online at busanstartup.kr",
+  "window_ko": "매년 2월 공고, 3~12월 운영",
+  "window_en": "Announced each February, program March to December",
+  "url": "https://www.bsia.or.kr/",
+  "contact": "BSIA 051-715-1755",
+  "note_ko": "부산 소재 업력 3년 미만 기술창업기업, 50개사 내외 (재창업 10개사 포함).",
+  "note_en": "Technology startups under three years old in Busan, about 50 companies."
+ },
+ {
+  "id": "bunicorn-boost",
+  "tier": "busan",
+  "name_ko": "부니콘 부스트 육성사업 (부산 창업도약패키지)",
+  "name_en": "Bunicorn Boost (Busan Scale-up Package)",
+  "org_ko": "부산기술창업투자원 (BSIA)",
+  "org_en": "Busan Startup Investment Agency (BSIA)",
+  "stages": [
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "사업화 자금 최대 5,000만 원",
+  "amount_en": "Up to KRW 50M in commercialization funding",
+  "support_ko": [
+   "1대1 기업 진단과 맞춤 액셀러레이팅",
+   "기술이전 및 IP 확보 지원",
+   "시제품 제작·사업 고도화 자금",
+   "투자 유치 교육·IR 코칭",
+   "데모데이"
+  ],
+  "support_en": [
+   "One-to-one diagnosis and tailored acceleration",
+   "Technology transfer and IP support",
+   "Prototyping and product upgrade funding",
+   "Investment training and IR coaching",
+   "Demo day"
+  ],
+  "apply_ko": "부산창업포털 온라인 접수",
+  "apply_en": "Apply online at busanstartup.kr",
+  "window_ko": "매년 2월 공고, 3~12월 운영",
+  "window_en": "Announced each February, program March to December",
+  "url": "https://www.bsia.or.kr/",
+  "contact": "BSIA 051-715-1743",
+  "note_ko": "부산 소재 업력 3년 초과 7년 미만 (신산업은 10년 미만), 20개사 내외.",
+  "note_en": "Busan companies from three to seven years old, 20 companies."
+ },
+ {
+  "id": "bunicorn",
+  "tier": "busan",
+  "name_ko": "부니콘 지원사업 (부산 대표 기술창업기업)",
+  "name_en": "Bunicorn Program (Busan Flagship Startup)",
+  "org_ko": "부산기술창업투자원 (BSIA)",
+  "org_en": "Busan Startup Investment Agency (BSIA)",
+  "stages": [
+   "scale"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "needs_investment": true,
+  "amount_ko": "스케일업 지원금 최대 1억 원",
+  "amount_en": "Up to KRW 100M in scale-up funding",
+  "support_ko": [
+   "부니콘 인증",
+   "스케일업 지원금 (공통 5,000만 원, 우수기업 추가 5,000만 원)",
+   "부산창투원 사업 참여 시 가점",
+   "밀착 관리"
+  ],
+  "support_en": [
+   "Bunicorn certification",
+   "Scale-up grant (KRW 50M common, plus KRW 50M for top companies)",
+   "Priority points in BSIA programs",
+   "Dedicated account management"
+  ],
+  "apply_ko": "부산창업포털 온라인 접수",
+  "apply_en": "Apply online at busanstartup.kr",
+  "window_ko": "매년 2월 모집, 3~4월 선발",
+  "window_en": "Recruitment in February, selection March to April",
+  "url": "https://www.bsia.or.kr/",
+  "contact": "BSIA 051-715-1744",
+  "note_ko": "업력 7년 미만이면서 누적 투자 30억 원 이상 또는 기업가치 300억 원 이상, 10개사.",
+  "note_en": "Under seven years old, with KRW 3B+ raised or KRW 30B+ valuation, 10 companies."
+ },
+ {
+  "id": "busan-u",
+  "tier": "busan",
+  "name_ko": "부산 U창업패키지",
+  "name_en": "Busan U Startup Package",
+  "org_ko": "부산기술창업투자원 (BSIA)",
+  "org_en": "Busan Startup Investment Agency (BSIA)",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": 19,
+  "max_age": null,
+  "regions": [
+   "bugyeong"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "student_only": true,
+  "amount_ko": "팀별 사업화 지원, 최대 1,000만 원 수준 (연도별 공고)",
+  "amount_en": "Team-level support, around KRW 10M (varies by year)",
+  "support_ko": [
+   "실무 중심 창업 교육",
+   "BM 고도화 멘토링",
+   "시제품(MVP) 설계·검증",
+   "IR 피칭 경진대회",
+   "투자 연계"
+  ],
+  "support_en": [
+   "Hands-on startup training",
+   "Business model mentoring",
+   "MVP design and validation",
+   "IR pitching competition",
+   "Investor connections"
+  ],
+  "apply_ko": "부산창업포털 온라인 접수",
+  "apply_en": "Apply online at busanstartup.kr",
+  "window_ko": "매년 2~3월 공고, 4~10월 프로그램",
+  "window_en": "Announced February to March, program April to October",
+  "url": "https://busanstartup.kr/",
+  "contact": "BSIA 051-715-1798",
+  "note_ko": "부산·울산·경남 소재 대학(원) 재학·휴학생 창업팀, 50팀 내외.",
+  "note_en": "University and graduate students in Busan, Ulsan or Gyeongnam, about 50 teams."
+ },
+ {
+  "id": "busan-guarantee",
+  "tier": "busan",
+  "name_ko": "부산시 창업 특례보증",
+  "name_en": "Busan Startup Special Guarantee",
+  "org_ko": "부산신용보증재단",
+  "org_en": "Busan Credit Guarantee Foundation",
+  "stages": [
+   "early",
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "manufacturing",
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "창업운전자금 5,000만 원 이내, 긴급구매자금 1억 원 이내 보증",
+  "amount_en": "Guarantee up to KRW 50M working capital, KRW 100M emergency purchase",
+  "support_ko": [
+   "고정금리 2.7퍼센트 대출 보증",
+   "보증료율 0.6퍼센트 고정",
+   "창업지원사업 수혜기업 또는 기술력 인정기업 대상"
+  ],
+  "support_en": [
+   "Loan guarantee at a fixed 2.7 percent rate",
+   "Fixed 0.6 percent guarantee fee",
+   "For startups that received a public startup program or hold proven technology"
+  ],
+  "apply_ko": "부산신용보증재단 보증영업점 또는 온라인 신청",
+  "apply_en": "Apply at a Busan Credit Guarantee Foundation branch or online",
+  "window_ko": "2026년 2월 11일부터 12월 31일까지 (자금 소진 시 종료)",
+  "window_en": "11 February to 31 December 2026, or until funds run out",
+  "url": "https://busanstartup.kr/biz_sup/1703?mcode=biz02",
+  "contact": "051-860-6600, simsa@busansinbo.or.kr",
+  "note_ko": "부산 소재 업력 7년 이내 기술창업기업 (신산업 10년). 대표자 신용 NICE 710점 또는 KCB 620점 이상.",
+  "note_en": "Busan technology startups under seven years old. Founder credit score NICE 710 or KCB 620 or above."
+ },
+ {
+  "id": "busan-women",
+  "tier": "busan",
+  "name_ko": "부산 여성 (예비)창업 지원사업",
+  "name_en": "Busan Women Startup Support",
+  "org_ko": "부산광역시 여성새로일하기센터",
+  "org_en": "Busan Women's New Job Center",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "women_only": true,
+  "amount_ko": "현물 지원 (컨설팅 45회, 특강 4회, 멘토링, 판촉전)",
+  "amount_en": "In-kind support (consulting, workshops, mentoring, market event)",
+  "support_ko": [
+   "7개 분야 1대1 전문가 컨설팅",
+   "창업 특강 및 직업교육훈련",
+   "원스톱 창업 멘토링",
+   "여성 창업 페스티벌 판촉전"
+  ],
+  "support_en": [
+   "One-to-one consulting in seven fields",
+   "Startup workshops and job training",
+   "One-stop startup mentoring",
+   "Sales booth at the women founders festival"
+  ],
+  "apply_ko": "부산여성새로일하기센터 공고 확인 후 신청",
+  "apply_en": "Apply through the Busan Women's New Job Center notice",
+  "window_ko": "매년 2~11월",
+  "window_en": "February to November each year",
+  "url": "https://busan.go.kr/wcc",
+  "contact": "051-320-8346",
+  "note_ko": "부산 주소지 여성 예비창업자 또는 부산 소재 3년 이내 여성 창업자.",
+  "note_en": "Women pre-founders living in Busan, or women founders within three years in Busan."
+ },
+ {
+  "id": "busanjin-keydream",
+  "tier": "busan",
+  "name_ko": "부산진구 창업 키워드림 지원사업",
+  "name_en": "Busanjin-gu Startup Key Dream",
+  "org_ko": "부산진구 일자리산업과",
+  "org_en": "Busanjin-gu Job and Industry Division",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": 18,
+  "max_age": 39,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "districts": [
+   "busanjin"
+  ],
+  "amount_ko": "1인 900만 원에서 1,000만 원",
+  "amount_en": "KRW 9M to 10M per team",
+  "support_ko": [
+   "공간임차료, 시설개선비, 홍보·마케팅비",
+   "1대1 밀착 컨설팅과 창업교육",
+   "축제·행사 판매 부스",
+   "네트워크"
+  ],
+  "support_en": [
+   "Rent, facility improvement, marketing",
+   "One-to-one consulting and training",
+   "Sales booths at local festivals",
+   "Networking"
+  ],
+  "apply_ko": "부산진구 공고 확인 후 신청",
+  "apply_en": "Apply through the Busanjin-gu notice",
+  "window_ko": "매년 상반기 공고",
+  "window_en": "Announced in the first half of each year",
+  "url": "https://www.busanjin.go.kr",
+  "contact": "051-605-8592",
+  "note_ko": "부산시 거주 18~39세, 예비창업자 또는 사업자등록 3년 이하, 10명(팀).",
+  "note_en": "Busan residents aged 18 to 39, pre-founders or businesses under three years, 10 teams."
+ },
+ {
+  "id": "geumjeong-local",
+  "tier": "busan",
+  "name_ko": "금정 청년 로컬 창업가 정착 지원",
+  "name_en": "Geumjeong Youth Local Founder Support",
+  "org_ko": "부산광역시 금정구 일자리정책과",
+  "org_en": "Geumjeong-gu Job Policy Division",
+  "stages": [
+   "early",
+   "growth"
+  ],
+  "min_age": 18,
+  "max_age": 39,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "districts": [
+   "geumjeong"
+  ],
+  "amount_ko": "기업당 사업화 자금 1,200만 원",
+  "amount_en": "KRW 12M per company",
+  "support_ko": [
+   "사업화 자금",
+   "BM 진단과 단계별 지원",
+   "IR 피칭 교육",
+   "로컬 팝업스토어 참여",
+   "창업가 네트워킹"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Business model diagnosis and staged support",
+   "IR pitching training",
+   "Local pop-up store participation",
+   "Founder networking"
+  ],
+  "apply_ko": "금정구 공고 확인 후 신청",
+  "apply_en": "Apply through the Geumjeong-gu notice",
+  "window_ko": "매년 5~12월 프로그램",
+  "window_en": "Program runs May to December",
+  "url": "https://www.geumjeong.go.kr",
+  "contact": "051-519-4874",
+  "note_ko": "금정구 소재 창업 7년 이하 청년 (18~39세), 10팀.",
+  "note_en": "Youth aged 18 to 39 with businesses under seven years in Geumjeong-gu, 10 teams."
+ },
+ {
+  "id": "pre-startup",
+  "tier": "national",
+  "name_ko": "예비창업패키지",
+  "name_en": "Pre-Startup Package",
+  "org_ko": "창업진흥원 (KISED)",
+  "org_en": "Korea Startup and Entrepreneurship Development Institute (KISED)",
+  "stages": [
+   "idea"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "최대 8,000만 원 (평균 4,000~5,000만 원)",
+  "amount_en": "Up to KRW 80M (average KRW 40M to 50M)",
+  "support_ko": [
+   "사업화 자금 (시제품, 마케팅, 지식재산권)",
+   "창업 교육과 멘토링",
+   "BM 고도화, 네트워킹",
+   "단계별 사업비 차등 지급"
+  ],
+  "support_en": [
+   "Commercialization funding (prototype, marketing, IP)",
+   "Startup training and mentoring",
+   "Business model development and networking",
+   "Staged funding after a mid-term review"
+  ],
+  "apply_ko": "K-Startup 창업지원포털 온라인 접수",
+  "apply_en": "Apply online at k-startup.go.kr",
+  "window_ko": "2026년 2월 말 공고, 2~3월 접수, 6월부터 지원",
+  "window_en": "Announced late February, applications February to March, funding from June",
+  "url": "https://www.kised.or.kr/menu.es?mid=a10205010000",
+  "contact": "KISED 044-410-1803",
+  "note_ko": "사업자등록 전 예비창업자, 300명 내외. 단순 도소매·카페 등은 지원 불가. 부산에서는 부산창조경제혁신센터가 주관합니다.",
+  "note_en": "Pre-founders without a business registration, about 300 people. Retail, cafes and similar are excluded. In Busan, the package is hosted by CCEI."
+ },
+ {
+  "id": "early-startup",
+  "tier": "national",
+  "name_ko": "초기창업패키지",
+  "name_en": "Early-Stage Startup Package",
+  "org_ko": "창업진흥원 (KISED)",
+  "org_en": "Korea Startup and Entrepreneurship Development Institute (KISED)",
+  "stages": [
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "일반·투자연계 최대 1억 원, 딥테크 최대 1억 5,000만 원",
+  "amount_en": "Up to KRW 100M general, up to KRW 150M for deep tech",
+  "support_ko": [
+   "사업화 자금",
+   "시장 진입·투자 유치·실증 프로그램",
+   "주관기관별 특화 창업 프로그램",
+   "부산에서는 CCEI, 동아대 등이 주관"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Market entry, investment and validation programs",
+   "Host-specific startup programs",
+   "In Busan, hosted by CCEI and Dong-A University"
+  ],
+  "apply_ko": "K-Startup 온라인 접수",
+  "apply_en": "Apply online at k-startup.go.kr",
+  "window_ko": "2025년 12월 공고, 2026년 1~2월 접수",
+  "window_en": "Announced December, applications January to February",
+  "url": "https://www.kised.or.kr/menu.es?mid=a10205020000",
+  "contact": "KISED 044-410-1831",
+  "note_ko": "업력 3년 이내 초기창업기업, 614개사 내외.",
+  "note_en": "Startups under three years old, about 614 companies."
+ },
+ {
+  "id": "leap-startup",
+  "tier": "national",
+  "name_ko": "창업도약패키지",
+  "name_en": "Scale-up Leap Package",
+  "org_ko": "창업진흥원 (KISED)",
+  "org_en": "Korea Startup and Entrepreneurship Development Institute (KISED)",
+  "stages": [
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "사업화 자금 최대 3억 원",
+  "amount_en": "Up to KRW 300M in commercialization funding",
+  "support_ko": [
+   "BM·제품·서비스 고도화 자금",
+   "후속 투자 연계",
+   "글로벌 시장 확대 프로그램"
+  ],
+  "support_en": [
+   "Funding to upgrade the business model, product or service",
+   "Follow-on investment connections",
+   "Global market expansion programs"
+  ],
+  "apply_ko": "K-Startup 온라인 접수",
+  "apply_en": "Apply online at k-startup.go.kr",
+  "window_ko": "2025년 12월 공고, 2026년 1월 접수",
+  "window_en": "Announced December, applications in January",
+  "url": "https://www.kised.or.kr/menu.es?mid=a10205030000",
+  "contact": "KISED 044-410-1860",
+  "note_ko": "업력 3년 초과 7년 이내, 460개사 내외.",
+  "note_en": "Companies from three to seven years old, about 460 companies."
+ },
+ {
+  "id": "youth-academy",
+  "tier": "national",
+  "name_ko": "청년창업사관학교 (부산)",
+  "name_en": "Youth Startup Academy (Busan)",
+  "org_ko": "중소벤처기업진흥공단 (KOSME)",
+  "org_en": "Korea SMEs and Startups Agency (KOSME)",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": 19,
+  "max_age": 39,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "최대 1억 원 (총사업비의 70퍼센트 이내)",
+  "amount_en": "Up to KRW 100M, within 70 percent of total project cost",
+  "support_ko": [
+   "개별 사무실 무료 제공",
+   "전담 교수 1대1 코칭",
+   "창업 교육과 단계별 진도 관리",
+   "시제품 제작·장비 지원",
+   "글로벌·투자 연계"
+  ],
+  "support_en": [
+   "Free individual office",
+   "One-to-one coaching by a dedicated professor",
+   "Training and staged progress management",
+   "Prototyping and equipment support",
+   "Global and investment connections"
+  ],
+  "apply_ko": "K-Startup 온라인 접수",
+  "apply_en": "Apply online at k-startup.go.kr",
+  "window_ko": "2026년 1월 말에서 2월 공고",
+  "window_en": "Announced late January to February",
+  "url": "https://www.kosmes.or.kr/sbc/SH/SBI/SHSBI035M0.do",
+  "contact": "부산청년창업사관학교 051-305-9930",
+  "note_ko": "만 39세 이하, 창업 3년 이내 (경험창업자 7년 이내). 전국 950명, 부산 40명.",
+  "note_en": "Age 39 or under, business under three years. 950 nationwide, 40 in Busan."
+ },
+ {
+  "id": "tips",
+  "tier": "national",
+  "name_ko": "팁스 (TIPS)",
+  "name_en": "TIPS",
+  "org_ko": "중소벤처기업부·창업진흥원",
+  "org_en": "Ministry of SMEs and Startups, KISED",
+  "stages": [
+   "early",
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "manufacturing",
+   "bio",
+   "content"
+  ],
+  "foreign": "entity",
+  "needs_investment": true,
+  "amount_ko": "R&D 일반 2년 8억 원, 딥테크 3년 15억 원 (사업화 자금 별도 최대 1억 원)",
+  "amount_en": "R&D up to KRW 800M over two years, KRW 1.5B over three years for deep tech, plus up to KRW 100M commercialization",
+  "support_ko": [
+   "운영사 투자와 추천이 전제",
+   "기술개발 R&D 자금",
+   "보육·멘토링",
+   "사업화 자금",
+   "해외 마케팅 연계"
+  ],
+  "support_en": [
+   "Requires investment and recommendation by a TIPS operator",
+   "Technology R&D funding",
+   "Incubation and mentoring",
+   "Commercialization funding",
+   "Overseas marketing support"
+  ],
+  "apply_ko": "TIPS 운영사를 통한 추천 후 신청",
+  "apply_en": "Apply after recommendation by a TIPS operator",
+  "window_ko": "분기별 수시 공고",
+  "window_en": "Quarterly calls",
+  "url": "https://www.kised.or.kr/",
+  "contact": "KISED 1357",
+  "note_ko": "업력 7년 이내 (신산업 10년). 운영사 선투자가 필요해 혼자 신청할 수 없습니다.",
+  "note_en": "Under seven years old. Requires a private operator's investment first; you cannot apply alone."
+ },
+ {
+  "id": "restart",
+  "tier": "national",
+  "name_ko": "재도전성공패키지",
+  "name_en": "Restart Success Package",
+  "org_ko": "창업진흥원 (KISED)",
+  "org_en": "Korea Startup and Entrepreneurship Development Institute (KISED)",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "restart_only": true,
+  "amount_ko": "사업화 자금과 재창업자금 연계 (공고별)",
+  "amount_en": "Commercialization funding plus linked restart loans (varies)",
+  "support_ko": [
+   "사업화 자금",
+   "재창업 특화 교육",
+   "법률·세무·회계 멘토링",
+   "중진공 재창업자금 연계",
+   "힐링 캠프"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Training for restart founders",
+   "Legal, tax and accounting mentoring",
+   "Linked KOSME restart loans",
+   "Peer support program"
+  ],
+  "apply_ko": "K-Startup 온라인 접수",
+  "apply_en": "Apply online at k-startup.go.kr",
+  "window_ko": "매년 1~2월 접수",
+  "window_en": "Applications January to February",
+  "url": "https://www.kised.or.kr/",
+  "contact": "KISED 044-410-1983",
+  "note_ko": "예비 또는 재창업 업력 7년 이내 재창업기업 대표, 150명 내외.",
+  "note_en": "Founders restarting, within seven years of the new business, about 150 people."
+ },
+ {
+  "id": "ultra-gap",
+  "tier": "national",
+  "name_ko": "초격차 스타트업 프로젝트",
+  "name_en": "Ultra-Gap Startup Project",
+  "org_ko": "창업진흥원 (KISED)",
+  "org_en": "Korea Startup and Entrepreneurship Development Institute (KISED)",
+  "stages": [
+   "growth",
+   "scale"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "manufacturing",
+   "bio"
+  ],
+  "foreign": "entity",
+  "amount_ko": "3년간 최대 6억 원",
+  "amount_en": "Up to KRW 600M over three years",
+  "support_ko": [
+   "사업화 자금",
+   "기술협업과 투자 연계",
+   "기술보증 우대"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Technology collaboration and investment links",
+   "Preferential technology guarantees"
+  ],
+  "apply_ko": "K-Startup 온라인 접수",
+  "apply_en": "Apply online at k-startup.go.kr",
+  "window_ko": "2025년 12월 공고, 2026년 1월 접수",
+  "window_en": "Announced December, applications in January",
+  "url": "https://www.kised.or.kr/",
+  "contact": "KISED 044-410-1681",
+  "note_ko": "6대 전략산업 12대 기술 분야, 업력 10년 이내, 629개사.",
+  "note_en": "Twelve strategic technology fields, under ten years old, 629 companies."
+ },
+ {
+  "id": "rnd-stepping",
+  "tier": "national",
+  "name_ko": "창업성장기술개발 (디딤돌)",
+  "name_en": "Startup Growth R&D (Stepping Stone)",
+  "org_ko": "중소기업기술정보진흥원",
+  "org_en": "Korea Technology and Information Promotion Agency",
+  "stages": [
+   "early",
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "manufacturing",
+   "bio"
+  ],
+  "foreign": "entity",
+  "amount_ko": "1.5년, 2억 원",
+  "amount_en": "KRW 200M over 18 months",
+  "support_ko": [
+   "기술개발 R&D 자금 (정부출연)",
+   "사업화 연계"
+  ],
+  "support_en": [
+   "Government R&D funding",
+   "Commercialization links"
+  ],
+  "apply_ko": "K-Startup 온라인 접수",
+  "apply_en": "Apply online at k-startup.go.kr",
+  "window_ko": "매년 1월 공고, 3월 접수",
+  "window_en": "Announced January, applications in March",
+  "url": "https://www.kised.or.kr/",
+  "contact": "1357",
+  "note_ko": "업력 7년 이하 (신산업 10년).",
+  "note_en": "Business under seven years (ten for new industries)."
+ },
+ {
+  "id": "midcareer-center",
+  "tier": "national",
+  "name_ko": "중장년 기술창업센터 (부산)",
+  "name_en": "Mid-Career Technology Startup Center (Busan)",
+  "org_ko": "창업진흥원·부산광역시 50+센터",
+  "org_en": "KISED and the Busan 50+ Center",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": 40,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "공간·교육·멘토링 현물 지원 (현금 지원 없음)",
+  "amount_en": "Space, training and mentoring in kind (no cash grant)",
+  "support_ko": [
+   "입주 및 코워킹 공간",
+   "창업 교육과 사업계획서 구체화",
+   "네트워킹, 멘토링, 사업화 연계",
+   "대기업·공공기관 퇴직자 대상 발굴 프로그램"
+  ],
+  "support_en": [
+   "Move-in and co-working space",
+   "Startup training and business plan development",
+   "Networking, mentoring and commercialization links",
+   "Discovery programs for retirees from large companies and public institutions"
+  ],
+  "apply_ko": "K-Startup 공고 확인 후 센터 방문 또는 온라인 신청",
+  "apply_en": "Check K-Startup notices, then apply online or visit the center",
+  "window_ko": "연중 수시 (센터별 일정 상이)",
+  "window_en": "Year-round, schedule varies by center",
+  "url": "https://www.kised.or.kr/menu.es?mid=a10203060000",
+  "contact": "KISED 042-480-4412, 부산 50+센터 051-864-6300",
+  "note_ko": "만 40세 이상 (예비)창업자. 부산중장년기술창업센터는 50+센터와 함께 운영됩니다.",
+  "note_en": "Founders aged 40 and over. The Busan center operates with the 50+ Center."
+ },
+ {
+  "id": "shinbo-nest",
+  "tier": "national",
+  "name_ko": "신용보증기금 Start-up NEST",
+  "name_en": "KODIT Start-up NEST",
+  "org_ko": "신용보증기금",
+  "org_en": "Korea Credit Guarantee Fund",
+  "stages": [
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "any"
+  ],
+  "foreign": "entity",
+  "amount_ko": "보증 한도 최대 70억 원, 보증료 0.5~0.7퍼센트",
+  "amount_en": "Guarantee up to KRW 7B, fee 0.5 to 0.7 percent",
+  "support_ko": [
+   "성장 단계별 신용보증",
+   "액셀러레이팅과 멘토링",
+   "직접·간접 투자",
+   "크라우드펀딩, 해외 진출"
+  ],
+  "support_en": [
+   "Stage-based credit guarantees",
+   "Acceleration and mentoring",
+   "Direct and indirect investment",
+   "Crowdfunding and overseas expansion"
+  ],
+  "apply_ko": "신용보증기금 부산스타트업지점",
+  "apply_en": "KODIT Busan startup branch",
+  "window_ko": "공개 모집 (지점 문의)",
+  "window_en": "Open calls, ask the branch",
+  "url": "https://www.kodit.co.kr",
+  "contact": "051-660-5011",
+  "note_ko": "혁신성장분야 3년 이내 창업기업.",
+  "note_en": "Innovative growth startups under three years old."
+ },
+ {
+  "id": "kibo-camp",
+  "tier": "national",
+  "name_ko": "기보벤처캠프",
+  "name_en": "KIBO Venture Camp",
+  "org_ko": "기술보증기금",
+  "org_en": "Korea Technology Finance Corporation",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tech",
+   "deep_tech",
+   "manufacturing"
+  ],
+  "foreign": "entity",
+  "amount_ko": "액셀러레이팅과 보증·투자 연계 (현금 지원 없음)",
+  "amount_en": "Acceleration plus guarantee and investment links (no cash grant)",
+  "support_ko": [
+   "액셀러레이터 협업 보육",
+   "성장전략 컨설팅",
+   "기술보증과 보증연계 투자",
+   "기술이전·경영 컨설팅"
+  ],
+  "support_en": [
+   "Incubation with accelerators",
+   "Growth strategy consulting",
+   "Technology guarantees and linked investment",
+   "Technology transfer and management consulting"
+  ],
+  "apply_ko": "기보 디지털지점 또는 K-Startup 공고",
+  "apply_en": "KIBO digital branch or K-Startup notice",
+  "window_ko": "연 2회, 1월과 7월 모집",
+  "window_en": "Twice a year, January and July",
+  "url": "https://www.kibo.or.kr",
+  "contact": "1544-1120",
+  "note_ko": "창업 후 3년 이내 혁신창업기업, 예비창업자 포함. 연 125개사.",
+  "note_en": "Innovative startups under three years, pre-founders included. 125 companies a year."
+ },
+ {
+  "id": "tourism-venture",
+  "tier": "sector",
+  "name_ko": "관광벤처사업 공모전",
+  "name_en": "Tourism Venture Competition",
+  "org_ko": "한국관광공사",
+  "org_en": "Korea Tourism Organization",
+  "stages": [
+   "idea",
+   "early",
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "tourism"
+  ],
+  "foreign": "entity",
+  "amount_ko": "사업화 자금과 교육·컨설팅 (공고별)",
+  "amount_en": "Commercialization funding plus training and consulting (varies)",
+  "support_ko": [
+   "사업화 자금",
+   "교육·컨설팅",
+   "협업과 네트워크",
+   "홍보·판로 개척"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Training and consulting",
+   "Collaboration and networking",
+   "Marketing and sales channels"
+  ],
+  "apply_ko": "투어라즈(touraz.kr) 접수",
+  "apply_en": "Apply at touraz.kr",
+  "window_ko": "매년 2월 공고, 2~3월 접수",
+  "window_en": "Announced February, applications February to March",
+  "url": "https://touraz.kr",
+  "contact": "02-729-9458",
+  "note_ko": "관광 분야 예비창업자부터 업력 7년 이내, 100여 개 기업.",
+  "note_en": "Tourism founders from pre-startup to seven years, about 100 companies."
+ },
+ {
+  "id": "maritime-platform",
+  "tier": "sector",
+  "name_ko": "해운항만산업 기술창업 지원플랫폼",
+  "name_en": "Shipping and Port Startup Platform",
+  "org_ko": "부산항만공사",
+  "org_en": "Busan Port Authority",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "maritime"
+  ],
+  "foreign": "entity",
+  "amount_ko": "입주 공간과 운영비 최대 700만 원",
+  "amount_en": "Office space plus up to KRW 7M operating cost",
+  "support_ko": [
+   "창업기업 사무공간과 사무집기",
+   "시제품·지식재산·법률 검토 비용",
+   "교육·컨설팅·R&D 멘토링",
+   "AC·VC 연계 데모데이",
+   "해외 전시 홍보"
+  ],
+  "support_en": [
+   "Office space and furniture",
+   "Prototype, IP and legal review costs",
+   "Training, consulting and R&D mentoring",
+   "Demo day with accelerators and investors",
+   "Overseas exhibition support"
+  ],
+  "apply_ko": "부산항만공사 공고 확인 후 신청",
+  "apply_en": "Apply through the Busan Port Authority notice",
+  "window_ko": "하반기 프로그램 중심 (공고별)",
+  "window_en": "Mainly second half of the year",
+  "url": "https://www.busanpa.com",
+  "contact": "051-999-8574",
+  "note_ko": "해운항만산업 (초기) 창업기업.",
+  "note_en": "Early-stage shipping and port startups."
+ },
+ {
+  "id": "sports-industry",
+  "tier": "sector",
+  "name_ko": "스포츠산업 예비초기창업·창업도약 지원",
+  "name_en": "Sports Industry Startup Support",
+  "org_ko": "국민체육진흥공단",
+  "org_en": "Korea Sports Promotion Foundation",
+  "stages": [
+   "idea",
+   "early",
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "sports"
+  ],
+  "foreign": "entity",
+  "amount_ko": "사업화 자금 평균 4,500만~5,000만 원",
+  "amount_en": "Average KRW 45M to 50M",
+  "support_ko": [
+   "사업화 자금",
+   "창업 교육과 컨설팅",
+   "시제품 제작",
+   "기업 간 네트워킹"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Startup training and consulting",
+   "Prototyping",
+   "Networking"
+  ],
+  "apply_ko": "스포츠산업지원 홈페이지(spobiz.kspo.or.kr)",
+  "apply_en": "Apply at spobiz.kspo.or.kr",
+  "window_ko": "매년 3월 공고·접수",
+  "window_en": "Announced and applied in March",
+  "url": "https://spobiz.kspo.or.kr",
+  "contact": "02-410-1757",
+  "note_ko": "스포츠산업 예비창업자 및 업력 7년 이내, 140개사 내외.",
+  "note_en": "Sports pre-founders and startups under seven years, about 140 companies."
+ },
+ {
+  "id": "art-venture",
+  "tier": "sector",
+  "name_ko": "예술분야 창업기업 지원",
+  "name_en": "Arts Startup Support",
+  "org_ko": "예술경영지원센터",
+  "org_en": "Korea Arts Management Service",
+  "stages": [
+   "early",
+   "growth",
+   "scale"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "art_design",
+   "content"
+  ],
+  "foreign": "entity",
+  "amount_ko": "단계별 사업화 자금 (공고별)",
+  "amount_en": "Staged commercialization funding (varies)",
+  "support_ko": [
+   "사업화 자금",
+   "교육·컨설팅·멘토링",
+   "투자 유치 연계",
+   "액셀러레이팅"
+  ],
+  "support_en": [
+   "Commercialization funding",
+   "Training, consulting and mentoring",
+   "Investment connections",
+   "Acceleration"
+  ],
+  "apply_ko": "예술경영지원센터 공고, NCAS 접수",
+  "apply_en": "KAMS notice, apply through NCAS",
+  "window_ko": "매년 2~3월 공고",
+  "window_en": "Announced February to March",
+  "url": "https://www.gokams.or.kr",
+  "contact": "02-708-2291",
+  "note_ko": "예술기업, 업력 10년 이내 65개 내외.",
+  "note_en": "Arts companies under ten years, about 65."
+ },
+ {
+  "id": "pet-industry",
+  "tier": "sector",
+  "name_ko": "반려동물 연관분야 창업기업 지원",
+  "name_en": "Pet Industry Startup Support",
+  "org_ko": "부산광역시 반려동물과·부산경제진흥원",
+  "org_en": "Busan Pet Policy Division and BEPA",
+  "stages": [
+   "early",
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "pet"
+  ],
+  "foreign": "entity",
+  "amount_ko": "사업화·컨설팅 지원, 자부담 20퍼센트 이상",
+  "amount_en": "Commercialization and consulting support, at least 20 percent own contribution",
+  "support_ko": [
+   "입주, 재료비, 시제품 제작 (3년 이내)",
+   "실증, 시험분석, 인증, 투자 컨설팅 (3~7년)",
+   "성장 단계별 컨설팅"
+  ],
+  "support_en": [
+   "Move-in, materials, prototyping (under three years)",
+   "Validation, testing, certification, investment consulting (three to seven years)",
+   "Stage-based consulting"
+  ],
+  "apply_ko": "부산경제진흥원 공고 확인 후 신청",
+  "apply_en": "Apply through the BEPA notice",
+  "window_ko": "매년 2~3월 모집",
+  "window_en": "Recruitment February to March",
+  "url": "https://www.bepa.kr",
+  "contact": "051-600-1713",
+  "note_ko": "부산 반려동물 연관 분야 창업기업, 6개사 내외.",
+  "note_en": "Busan pet industry startups, about six companies."
+ },
+ {
+  "id": "design-fusion",
+  "tier": "sector",
+  "name_ko": "차세대 부산 디자인 융합 산업육성 (디자인창업 트랙)",
+  "name_en": "Busan Design Fusion Startup Track",
+  "org_ko": "부산디자인진흥원",
+  "org_en": "Busan Design Promotion Institute",
+  "stages": [
+   "early",
+   "growth"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "busan"
+  ],
+  "industries": [
+   "art_design",
+   "manufacturing"
+  ],
+  "foreign": "entity",
+  "amount_ko": "제품·서비스 고도화 자금 3,000만 원",
+  "amount_en": "KRW 30M for product and service development",
+  "support_ko": [
+   "BM 진단과 집중 액셀러레이팅",
+   "사업화 지원금 최대 3,000만 원",
+   "IR 데모데이와 투자 연계",
+   "공유오피스"
+  ],
+  "support_en": [
+   "Business model diagnosis and intensive acceleration",
+   "Up to KRW 30M commercialization grant",
+   "IR demo day and investment links",
+   "Shared office"
+  ],
+  "apply_ko": "부산디자인진흥원 공고 확인 후 신청",
+  "apply_en": "Apply through the Busan Design Promotion Institute notice",
+  "window_ko": "매년 2~3월 모집",
+  "window_en": "Recruitment February to March",
+  "url": "https://www.dcb.or.kr",
+  "contact": "051-790-1088",
+  "note_ko": "부산 소재 디자인·기술융합 창업기업.",
+  "note_en": "Busan design and technology fusion startups."
+ },
+ {
+  "id": "oasis",
+  "tier": "national",
+  "name_ko": "OASIS 창업이민 인재양성 프로그램 (부산)",
+  "name_en": "OASIS Startup Immigration Program (Busan)",
+  "org_ko": "부산 글로벌창업이민센터 (BSIA 운영)",
+  "org_en": "Busan Global Startup Immigration Center (operated by BSIA)",
+  "stages": [
+   "idea",
+   "early"
+  ],
+  "min_age": null,
+  "max_age": null,
+  "regions": [
+   "korea"
+  ],
+  "industries": [
+   "any"
+  ],
+  "foreign": "yes",
+  "foreign_only": true,
+  "abroad_ok": true,
+  "amount_ko": "교육·컨설팅 무료, 기술창업비자(D-8-4) 점수 확보",
+  "amount_en": "Free training and consulting, points toward the D-8-4 startup visa",
+  "support_ko": [
+   "창업 교육과 멘토링 (OASIS 1~9 과정)",
+   "법인 설립과 비자 상담",
+   "D-8-4 비자 점수 (과정별 10~30점)",
+   "부산 정착 지원"
+  ],
+  "support_en": [
+   "Startup training and mentoring (OASIS courses 1 to 9)",
+   "Company setup and visa consulting",
+   "D-8-4 visa points (10 to 30 per course)",
+   "Settlement support in Busan"
+  ],
+  "apply_ko": "부산 글로벌창업이민센터 또는 oasis-kipa.kr",
+  "apply_en": "Busan Global Startup Immigration Center or oasis-kipa.kr",
+  "window_ko": "연중 여러 차례 모집",
+  "window_en": "Several intakes a year",
+  "url": "https://www.oasis-kipa.kr/kor/",
+  "contact": "BSIA 051-715-1790",
+  "note_ko": "외국인 (예비)창업자. D-8-4 비자는 300점 만점에 60점 이상과 법인 설립이 필요합니다.",
+  "note_en": "Foreign pre-founders. The D-8-4 visa needs 60 of 300 points and a Korean company."
+ }
+];
+const INDUSTRIES = [{"id": "any", "en": "Any sector", "ko": "업종 무관"}, {"id": "tech", "en": "Software and technology", "ko": "소프트웨어·기술"}, {"id": "deep_tech", "en": "Deep tech, AI, hardware", "ko": "딥테크·인공지능·하드웨어"}, {"id": "manufacturing", "en": "Manufacturing", "ko": "제조"}, {"id": "bio", "en": "Bio and healthcare", "ko": "바이오·헬스케어"}, {"id": "content", "en": "Content and media", "ko": "콘텐츠·미디어"}, {"id": "tourism", "en": "Tourism and travel", "ko": "관광·여행"}, {"id": "maritime", "en": "Shipping, port, ocean", "ko": "해운·항만·해양"}, {"id": "sports", "en": "Sports", "ko": "스포츠"}, {"id": "art_design", "en": "Art and design", "ko": "예술·디자인"}, {"id": "pet", "en": "Pet industry", "ko": "반려동물"}, {"id": "food", "en": "Food and agriculture", "ko": "식품·농업"}];
+
+const T = {
+ en: {
+  brandSub:"STARTUP SUPPORT NAVIGATOR",
+  h1:"Find out what you can actually apply for.",
+  sub:"Enter five things. See every Busan and Korean startup program you qualify for, what each one gives you, and how to apply. No login, no email, nothing stored.",
+  lblStage:"Your stage",
+  lblAge:"Your age",
+  lblLoc:"Where you are",
+  lblStatus:"Founder status",
+  lblInd:"Sector",
+  lblWoman:"I am a woman founder (only used to show women-only programs)",
+  lblStudent:"I am a university or graduate student (or on leave)",
+  lblRestart:"I have closed a business and am starting again",
+  lblDist:"Busan district", distAny:"Any district",
+  btnRun:"Show my matches", btnReset:"Reset", btnPrint:"Print or save as PDF",
+  count:(n,m)=> n + " programs match. " + m + " more are close.",
+  stages:[
+    {id:"idea",t:"Pre-startup",s:"No business registration yet"},
+    {id:"early",t:"Early",s:"0 to 3 years"},
+    {id:"growth",t:"Growth",s:"3 to 7 years"},
+    {id:"scale",t:"Scale",s:"7+ years or funded"}
+  ],
+  locs:[["busan","Busan"],["bugyeong","Ulsan or Gyeongnam"],["korea","Elsewhere in Korea"],["abroad","Outside Korea"]],
+  statuses:[["korean","Korean national"],["foreign_resident","Foreign founder in Korea"],["foreign_abroad","Foreign founder abroad"]],
+  gQualify:"You qualify", gAlmost:"Almost, with one condition", pQualify:"READY", pAlmost:"CONDITION",
+  whyStage:{"idea":"Pre-startup fits","early":"Under 3 years","growth":"3 to 7 years","scale":"7+ years or funded"},
+  whyBusan:"Based in Busan", whyBugyeong:"Busan, Ulsan or Gyeongnam", whyKorea:"Based in Korea",
+  whyAgeMin:(a)=>"Age "+a+" and over", whyAgeMax:(a)=>"Age "+a+" or under",
+  whyInd:"Sector fits", whyForeign:"Open to foreign founders", whyForeignEntity:"Open to foreign founders with a Korean company", whyWoman:"Women-only program",
+  warnAge:(a)=>"Opens at age "+a,
+  warnDistrict:(n)=>"Only for "+n,
+  warnSector:"Sector-specific program",
+  warnInvest:"Needs an investor or operator first",
+  warnEntity:"Needs a Korean company",
+  warnMove:"Needs a Korean address or entity",
+  districts:[["jung","Jung-gu"],["seo","Seo-gu"],["dong","Dong-gu"],["yeongdo","Yeongdo-gu"],["busanjin","Busanjin-gu"],["dongnae","Dongnae-gu"],["nam","Nam-gu"],["buk","Buk-gu"],["haeundae","Haeundae-gu"],["gijang","Gijang-gun"],["saha","Saha-gu"],["geumjeong","Geumjeong-gu"],["gangseo","Gangseo-gu"],["yeonje","Yeonje-gu"],["suyeong","Suyeong-gu"],["sasang","Sasang-gu"]],
+  lblAmount:"What you get", lblWindow:"When to apply", lblApply:"How to apply", lblContact:"Contact", lblSource:"Official source",
+  openLink:"Official page", applyLink:"Apply or read the notice",
+  support:"Support", empty:"No program matches these answers yet. Try a different stage or sector, or write to us and we will look with you.",
+  ctaTitle:"Want a person to look at this with you?",
+  ctaText:"한수 프로젝트 matches founders in Busan with retired executives for six months, free. Write to nissimworks@gmail.com or call +82 10-2755-6254.",
+  foot:"Verified November 2026 against the 2026 Busan Startup Support Program Guide, KISED, KOSME, BSIA, Busan Credit Guarantee Foundation and the program owners' pages. Every date shown is the 2026 cycle. The 2027 notices are not published yet: KISED opened recruitment for 2027 초기창업 and 창업도약 host institutions in November 2026. Always confirm on the official notice before you apply. This page runs entirely in your browser and stores nothing. Built by Nissim Work (닛심워크) for 한수 프로젝트.",
+  note:"Program rules, amounts and dates change every year. Always confirm on the official notice."
+ },
+ ko: {
+  brandSub:"부산 창업지원 내비게이터",
+  h1:"내가 실제로 신청할 수 있는 사업을 확인하세요.",
+  sub:"다섯 가지만 입력하면 부산과 국내 창업지원사업 가운데 신청 가능한 사업, 지원 내용, 신청 방법을 바로 보여 드립니다. 로그인 없음, 이메일 없음, 저장되는 정보 없음.",
+  lblStage:"현재 단계",
+  lblAge:"연령",
+  lblLoc:"소재지",
+  lblStatus:"창업자 신분",
+  lblInd:"업종",
+  lblWoman:"여성 창업자입니다 (여성 전용 사업 표시에만 사용)",
+  lblStudent:"대학(원) 재학 또는 휴학 중입니다",
+  lblRestart:"폐업 후 다시 창업하거나 재창업을 준비하고 있습니다",
+  lblDist:"부산 구·군", distAny:"전체",
+  btnRun:"내게 맞는 사업 보기", btnReset:"초기화", btnPrint:"인쇄 또는 PDF 저장",
+  count:(n,m)=> n + "개 사업이 해당됩니다. 조건이 하나 남은 사업이 " + m + "개 있습니다.",
+  stages:[
+    {id:"idea",t:"예비창업",s:"사업자등록 전"},
+    {id:"early",t:"초기",s:"업력 3년 이내"},
+    {id:"growth",t:"도약",s:"업력 3~7년"},
+    {id:"scale",t:"스케일업",s:"7년 이상 또는 투자 유치"}
+  ],
+  locs:[["busan","부산"],["bugyeong","울산·경남"],["korea","국내 다른 지역"],["abroad","해외"]],
+  statuses:[["korean","내국인"],["foreign_resident","국내 체류 외국인 창업자"],["foreign_abroad","해외 거주 외국인 창업자"]],
+  gQualify:"신청 가능", gAlmost:"조건 하나 남음", pQualify:"가능", pAlmost:"조건",
+  whyStage:{"idea":"예비창업자 해당","early":"업력 3년 이내","growth":"업력 3~7년","scale":"7년 이상 또는 투자 유치"},
+  whyBusan:"부산 소재", whyBugyeong:"부산·울산·경남 소재", whyKorea:"국내 소재",
+  whyAgeMin:(a)=>"만 "+a+"세 이상", whyAgeMax:(a)=>"만 "+a+"세 이하",
+  whyInd:"업종 해당", whyForeign:"외국인 신청 가능", whyForeignEntity:"국내 법인을 둔 외국인 창업자 신청 가능", whyWoman:"여성 전용 사업",
+  warnAge:(a)=>"만 "+a+"세부터 신청 가능",
+  warnDistrict:(n)=>n+" 소재 사업",
+  warnSector:"분야별 사업",
+  warnInvest:"투자자·운영사 선투자 또는 추천 필요",
+  warnEntity:"국내 법인 설립 필요",
+  warnMove:"국내 주소 또는 법인 필요",
+  districts:[["jung","중구"],["seo","서구"],["dong","동구"],["yeongdo","영도구"],["busanjin","부산진구"],["dongnae","동래구"],["nam","남구"],["buk","북구"],["haeundae","해운대구"],["gijang","기장군"],["saha","사하구"],["geumjeong","금정구"],["gangseo","강서구"],["yeonje","연제구"],["suyeong","수영구"],["sasang","사상구"]],
+  lblAmount:"지원 내용", lblWindow:"신청 시기", lblApply:"신청 방법", lblContact:"문의", lblSource:"공식 출처",
+  openLink:"공식 페이지", applyLink:"공고 확인 및 신청",
+  support:"지원 내용", empty:"입력하신 조건에 맞는 사업이 아직 없습니다. 단계나 업종을 바꿔 보시거나, 저희에게 연락 주시면 함께 찾아보겠습니다.",
+  ctaTitle:"이 결과를 사람과 함께 보고 싶으신가요?",
+  ctaText:"한수 프로젝트는 부산의 창업자를 은퇴한 선배 경영인과 6개월 동안 무료로 연결합니다. nissimworks@gmail.com 또는 +82 10-2755-6254로 연락 주십시오.",
+  foot:"2026년 11월 기준으로 2026 부산광역시 창업지원사업 안내책자, 창업진흥원, 중소벤처기업진흥공단, 부산기술창업투자원, 부산신용보증재단 및 각 사업 주관 기관의 공식 자료를 확인하여 정리하였습니다. 표시된 일정은 모두 2026년 사이클입니다. 2027년 공고는 아직 게시되지 않았습니다. 창업진흥원은 2026년 11월에 2027년 초기창업·창업도약 패키지 주관기관 모집 공고를 냈습니다. 신청 전 반드시 공고문을 확인하시기 바랍니다. 이 페이지는 브라우저 안에서만 작동하며 어떤 정보도 저장하지 않습니다. 닛심워크가 한수 프로젝트를 위해 제작하였습니다.",
+  note:"사업 규칙과 금액, 일정은 매년 바뀝니다. 신청 전 공고문을 반드시 확인하십시오."
+ }
+};
+
+let lang = "en";
+let stage = "early";
+let hasRun = false;
+
+function fmt(n){ return n.toLocaleString("en-US"); }
+
+function buildForm(){
+  const t = T[lang];
+  document.getElementById("h1").textContent = t.h1;
+  document.getElementById("sub").textContent = t.sub;
+  document.getElementById("brandSub").textContent = t.brandSub;
+  document.getElementById("lblStage").textContent = t.lblStage;
+  document.getElementById("lblAge").textContent = t.lblAge;
+  document.getElementById("lblLoc").textContent = t.lblLoc;
+  document.getElementById("lblStatus").textContent = t.lblStatus;
+  document.getElementById("lblInd").textContent = t.lblInd;
+  document.getElementById("lblWoman").textContent = t.lblWoman;
+  document.getElementById("lblStudent").textContent = t.lblStudent;
+  document.getElementById("lblRestart").textContent = t.lblRestart;
+  document.getElementById("lblDist").textContent = t.lblDist;
+  document.getElementById("btnRun").textContent = t.btnRun;
+  document.getElementById("btnReset").textContent = t.btnReset;
+  document.getElementById("btnPrint").textContent = t.btnPrint;
+  document.getElementById("ctaTitle").textContent = t.ctaTitle;
+  document.getElementById("ctaText").innerHTML = t.ctaText.replace(/(nissimworks@gmail\.com|\+82 10-2755-6254)/g, "<a href=\"mailto:nissimworks@gmail.com\">$1</a>");
+  document.getElementById("foot").textContent = t.foot;
+
+  document.getElementById("stageBox").innerHTML = t.stages.map(s=>
+    `<label class="stage ${stage===s.id?'sel':''}" data-id="${s.id}">
+      <input type="radio" name="stage" value="${s.id}" ${stage===s.id?'checked':''}>
+      <span class="t">${s.t}</span><span class="s">${s.s}</span></label>`).join("");
+  document.querySelectorAll(".stage").forEach(el=>el.addEventListener("click",()=>{
+    stage = el.dataset.id;
+    document.querySelectorAll(".stage").forEach(x=>x.classList.toggle("sel", x.dataset.id===stage));
+  }));
+
+  const loc = document.getElementById("loc");
+  const prevLoc = loc.value || "busan";
+  loc.innerHTML = t.locs.map(([v,l])=>`<option value="${v}">${l}</option>`).join("");
+  loc.value = prevLoc;
+  const dist = document.getElementById("dist");
+  const prevDist = dist.value || "any";
+  dist.innerHTML = `<option value="any">${t.distAny}</option>` + t.districts.map(([v,l])=>`<option value="${v}">${l}</option>`).join("");
+  dist.value = prevDist;
+  const df = document.getElementById("distField");
+  const toggleDist = ()=>{ df.style.display = (loc.value==="busan") ? "" : "none"; };
+  loc.onchange = toggleDist; toggleDist();
+
+  const st = document.getElementById("status");
+  const prevSt = st.value || "korean";
+  st.innerHTML = t.statuses.map(([v,l])=>`<option value="${v}">${l}</option>`).join("");
+  st.value = prevSt;
+  const ind = document.getElementById("ind");
+  const prevInd = ind.value || "any";
+  ind.innerHTML = INDUSTRIES.map(i=>`<option value="${i.id}">${lang==='en'?i.en:i.ko}</option>`).join("");
+  ind.value = prevInd;
+  if(hasRun) run();
+}
+
+function setLang(l){
+  lang = l;
+  document.getElementById("enBtn").classList.toggle("on", l==="en");
+  document.getElementById("koBtn").classList.toggle("on", l==="ko");
+  document.documentElement.lang = l;
+  buildForm();
+}
+
+function evaluate(p, u){
+  const reasons = [], warns = [];
+  if(!p.stages.includes(u.stage)) return null;
+  if(u.age < 16 || u.age > 90) return null;
+
+  if(p.min_age && u.age < p.min_age){
+    if(p.min_age - u.age <= 6) warns.push({k:"age", v:p.min_age});
+    else return null;
+  }
+  if(p.max_age && u.age > p.max_age) return null;
+
+  const inKorea = u.loc !== "abroad";
+  let regionOk = false;
+  if(p.abroad_ok) regionOk = true;
+  else if(p.regions.includes("korea")) regionOk = inKorea;
+  else if(p.regions.includes("bugyeong")) regionOk = (u.loc==="busan" || u.loc==="bugyeong");
+  else if(p.regions.includes("busan")) regionOk = u.loc==="busan";
+
+  if(!regionOk){
+    if(u.loc==="abroad" && p.regions.includes("korea")) warns.push({k:"move"});
+    else return null;
+  }
+
+  if(p.student_only && !u.student) return null;
+  if(p.restart_only && !u.restart) return null;
+  if(p.foreign_only && u.status === "korean") return null;
+  if(p.needs_investment) warns.push({k:"invest"});
+  if(p.districts){
+    if(u.district === "any") warns.push({k:"district", v:p.districts});
+    else if(!p.districts.includes(u.district)) return null;
+  }
+  if(!(p.industries.includes("any") || p.industries.includes(u.industry) || u.industry==="any")) return null;
+  if(p.women_only && !u.woman) return null;
+  if(p.tier === "sector" && u.industry === "any") warns.push({k:"sector"});
+
+  if(u.status !== "korean"){
+    if(p.foreign === "no") return null;
+    if(p.foreign === "entity"){
+      if(u.status === "foreign_abroad") warns.push({k:"entity"});
+      else reasons.push("foreignEntity");
+    } else if(p.foreign === "yes") reasons.push("foreign");
+  }
+  if(p.women_only) reasons.push("woman");
+  if(p.regions.includes("busan") && u.loc==="busan") reasons.push("busan");
+  if(p.regions.includes("bugyeong")) reasons.push("bugyeong");
+  if(p.regions.includes("korea") && inKorea) reasons.push("korea");
+  if(p.min_age && u.age >= p.min_age) reasons.push("ageMin");
+  if(!p.industries.includes("any") && u.industry !== "any") reasons.push("ind");
+  reasons.push("stage");
+
+  return {p, reasons, warns, status: warns.length ? "almost" : "qualify"};
+}
+
+function labelFor(p){
+  const q = lang==="en" ? (p.name_en + "@@" + p.org_en) : (p.name_ko + "@@" + p.org_ko);
+  return q.split("@@");
+}
+
+function cardHtml(r){
+  const t = T[lang], p = r.p;
+  const [name, org] = labelFor(p);
+  const amount = lang==="en" ? p.amount_en : p.amount_ko;
+  const support = lang==="en" ? p.support_en : p.support_ko;
+  const win = lang==="en" ? p.window_en : p.window_ko;
+  const apply = lang==="en" ? p.apply_en : p.apply_ko;
+  const note = lang==="en" ? p.note_en : p.note_ko;
+  const tierTag = p.tier==="busan" ? (lang==="en"?"Busan":"부산") : (p.tier==="sector"?(lang==="en"?"Sector":"분야별"):(lang==="en"?"National":"국가"));
+  const why = r.reasons.map(k=>{
+    if(k==="stage") return `<li>${t.whyStage[p.stages[0]]||t.whyStage.early}</li>`;
+    if(k==="busan") return `<li>${t.whyBusan}</li>`;
+    if(k==="bugyeong") return `<li>${t.whyBugyeong}</li>`;
+    if(k==="korea") return `<li>${t.whyKorea}</li>`;
+    if(k==="ageMin") return `<li>${t.whyAgeMin(p.min_age)}</li>`;
+    if(k==="foreign") return `<li>${t.whyForeign}</li>`;
+    if(k==="foreignEntity") return `<li>${t.whyForeignEntity}</li>`;
+    if(k==="woman") return `<li>${t.whyWoman}</li>`;
+    if(k==="ind") return `<li>${t.whyInd}</li>`;
+    return "";
+  }).join("");
+  const warns = r.warns.map(w=>{
+    if(w.k==="age") return `<li class="warn">${t.warnAge(w.v)}</li>`;
+    if(w.k==="entity") return `<li class="warn">${t.warnEntity}</li>`;
+    if(w.k==="move") return `<li class="warn">${t.warnMove}</li>`;
+    if(w.k==="sector") return `<li class="warn">${t.warnSector}</li>`;
+    if(w.k==="invest") return `<li class="warn">${t.warnInvest}</li>`;
+    if(w.k==="district"){
+      const names = (w.v||[]).map(d=>{const f=t.districts.find(x=>x[0]===d); return f?f[1]:d;}).join(", ");
+      return `<li class="warn">${t.warnDistrict(names)}</li>`;
+    }
+    return "";
+  }).join("");
+  return `<article class="card ${r.status==='qualify'?'top':'soon'}">
+    <div class="chead">
+      <div><h3>${name}</h3><div class="org">${org}</div></div>
+      <div class="amount">${amount}</div>
+    </div>
+    <div class="chips"><span class="tag ${p.tier==='busan'?'b':''}">${tierTag}</span></div>
+    <ul class="why">${why}${warns}</ul>
+    <div class="detail"><b>${t.support}:</b><ul>${support.map(s=>`<li>${s}</li>`).join("")}</ul></div>
+    <div class="meta">
+      <div><b>${t.lblWindow}</b><br>${win}</div>
+      <div><b>${t.lblApply}</b><br>${apply}</div>
+      <div><b>${t.lblContact}</b><br>${p.contact}</div>
+    </div>
+    <div class="links"><a href="${p.url}" target="_blank" rel="noopener">${t.applyLink} &#8599;</a></div>
+    <p class="note">${note} ${t.note}</p>
+  </article>`;
+}
+
+function run(initial){
+  hasRun = true;
+  const u = {
+    stage: stage,
+    age: parseInt(document.getElementById("age").value||"32",10),
+    loc: document.getElementById("loc").value,
+    status: document.getElementById("status").value,
+    industry: document.getElementById("ind").value,
+    woman: document.getElementById("woman").checked,
+    student: document.getElementById("student").checked,
+    restart: document.getElementById("restart").checked,
+    district: document.getElementById("dist").value
+  };
+  const out = [];
+  PROGRAMS.forEach(p=>{
+    const r = evaluate(p,u);
+    if(r) out.push(r);
+  });
+  const order = {busan:0, national:1, sector:2};
+  out.sort((a,b)=>{
+    if(a.status!==b.status) return a.status==="qualify"?-1:1;
+    if(order[a.p.tier]!==order[b.p.tier]) return order[a.p.tier]-order[b.p.tier];
+    return 0;
+  });
+  const qual = out.filter(r=>r.status==="qualify");
+  const almost = out.filter(r=>r.status==="almost");
+  const t = T[lang];
+  document.getElementById("count").textContent = out.length ? t.count(qual.length, almost.length) : "";
+
+  let html = "";
+  if(!out.length){
+    html = `<div class="empty">${t.empty}</div>`;
+  } else {
+    if(qual.length){
+      html += `<div class="grouphead"><h2>${t.gQualify}</h2><span class="pill green">${qual.length}</span></div><div class="cards">${qual.map(cardHtml).join("")}</div>`;
+    }
+    if(almost.length){
+      html += `<div class="grouphead"><h2>${t.gAlmost}</h2><span class="pill">${almost.length}</span></div><div class="cards">${almost.map(cardHtml).join("")}</div>`;
+    }
+  }
+  document.getElementById("results").innerHTML = html;
+  if(!initial) document.getElementById("results").scrollIntoView({behavior:"smooth", block:"start"});
+}
+
+function resetAll(){
+  stage = "early";
+  document.getElementById("age").value = 32;
+  document.getElementById("loc").value = "busan";
+  document.getElementById("status").value = "korean";
+  document.getElementById("ind").value = "any";
+  document.getElementById("woman").checked = false;
+  document.getElementById("student").checked = false;
+  document.getElementById("restart").checked = false;
+  document.getElementById("dist").value = "any";
+  document.querySelectorAll(".stage").forEach(x=>x.classList.toggle("sel", x.dataset.id===stage));
+  document.getElementById("results").innerHTML = "";
+  document.getElementById("count").textContent = "";
+  hasRun = false;
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+buildForm();
+setTimeout(()=>run(true), 250);
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img" aria-label="한수 프로젝트: two baduk stones with small friendly faces on a board, inside a round badge">
+<title>한수 프로젝트 / Hansu Project</title>
+<desc>A round emblem: a baduk board grid inside an ink ring, with one large jade stone and one small plum stone, each with a small friendly face.</desc>
+<defs><clipPath id="hansu-disc"><circle cx="500" cy="500" r="464"/></clipPath></defs>
+<circle cx="500" cy="500" r="478" fill="none"/>
+<g clip-path="url(#hansu-disc)" stroke="#1C1B1A" stroke-width="8" opacity="0.42">
+<line x1="0" y1="36" x2="1000" y2="36"/>
+<line x1="0" y1="152" x2="1000" y2="152"/>
+<line x1="0" y1="268" x2="1000" y2="268"/>
+<line x1="0" y1="384" x2="1000" y2="384"/>
+<line x1="0" y1="500" x2="1000" y2="500"/>
+<line x1="0" y1="616" x2="1000" y2="616"/>
+<line x1="0" y1="732" x2="1000" y2="732"/>
+<line x1="0" y1="848" x2="1000" y2="848"/>
+<line x1="0" y1="964" x2="1000" y2="964"/>
+<line x1="36" y1="0" x2="36" y2="1000"/>
+<line x1="152" y1="0" x2="152" y2="1000"/>
+<line x1="268" y1="0" x2="268" y2="1000"/>
+<line x1="384" y1="0" x2="384" y2="1000"/>
+<line x1="500" y1="0" x2="500" y2="1000"/>
+<line x1="616" y1="0" x2="616" y2="1000"/>
+<line x1="732" y1="0" x2="732" y2="1000"/>
+<line x1="848" y1="0" x2="848" y2="1000"/>
+<line x1="964" y1="0" x2="964" y2="1000"/>
+</g>
+<circle cx="500" cy="500" r="478" fill="none" stroke="#1C1B1A" stroke-width="34"/>
+<circle cx="372" cy="360" r="232" fill="none" stroke="#1C1B1A" stroke-width="18"/>
+<circle cx="666" cy="668" r="128" fill="none" stroke="#1C1B1A" stroke-width="15"/>
+<g fill="#1C1B1A">
+<circle cx="292" cy="326" r="18"/>
+<circle cx="452" cy="326" r="18"/>
+<circle cx="623" cy="648" r="12"/>
+<circle cx="709" cy="648" r="12"/>
+</g>
+<path d="M314 410 Q372 464 430 410" fill="none" stroke="#1C1B1A" stroke-width="16" stroke-linecap="round"/>
+<path d="M633 695 Q666 723 699 695" fill="none" stroke="#1C1B1A" stroke-width="12" stroke-linecap="round"/>
+</svg>
