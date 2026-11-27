@@ -1419,7 +1419,7 @@ const T = {
   openLink:"Official page", applyLink:"Apply or read the notice",
   support:"Support", empty:"No program matches these answers yet. Try a different stage or sector, or write to us and we will look with you.",
   ctaTitle:"Want a person to look at this with you?",
-  ctaText:"한수 프로젝트 matches founders in Busan with retired executives for six months, free. Write to nissimworks@gmail.com or call +82 10-2755-6254.",
+  ctaText:"한수 프로젝트 matches founders in Busan with retired executives for six months, free. Write to nissimworks@gmail.com.",
   foot:"Verified November 2026 against the 2026 Busan Startup Support Program Guide, KISED, KOSME, BSIA, Busan Credit Guarantee Foundation and the program owners' pages. Every date shown is the 2026 cycle. The 2027 notices are not published yet: KISED opened recruitment for 2027 초기창업 and 창업도약 host institutions in November 2026. Always confirm on the official notice before you apply. This page runs entirely in your browser and stores nothing. Built by Nissim Work (닛심워크) for 한수 프로젝트.",
   note:"Program rules, amounts and dates change every year. Always confirm on the official notice."
  },
@@ -1462,7 +1462,7 @@ const T = {
   openLink:"공식 페이지", applyLink:"공고 확인 및 신청",
   support:"지원 내용", empty:"입력하신 조건에 맞는 사업이 아직 없습니다. 단계나 업종을 바꿔 보시거나, 저희에게 연락 주시면 함께 찾아보겠습니다.",
   ctaTitle:"이 결과를 사람과 함께 보고 싶으신가요?",
-  ctaText:"한수 프로젝트는 부산의 창업자를 은퇴한 선배 경영인과 6개월 동안 무료로 연결합니다. nissimworks@gmail.com 또는 +82 10-2755-6254로 연락 주십시오.",
+  ctaText:"한수 프로젝트는 부산의 창업자를 은퇴한 선배 경영인과 6개월 동안 무료로 연결합니다. nissimworks@gmail.com 으로 연락 주십시오.",
   foot:"2026년 11월 기준으로 2026 부산광역시 창업지원사업 안내책자, 창업진흥원, 중소벤처기업진흥공단, 부산기술창업투자원, 부산신용보증재단 및 각 사업 주관 기관의 공식 자료를 확인하여 정리하였습니다. 표시된 일정은 모두 2026년 사이클입니다. 2027년 공고는 아직 게시되지 않았습니다. 창업진흥원은 2026년 11월에 2027년 초기창업·창업도약 패키지 주관기관 모집 공고를 냈습니다. 신청 전 반드시 공고문을 확인하시기 바랍니다. 이 페이지는 브라우저 안에서만 작동하며 어떤 정보도 저장하지 않습니다. 닛심워크가 한수 프로젝트를 위해 제작하였습니다.",
   note:"사업 규칙과 금액, 일정은 매년 바뀝니다. 신청 전 공고문을 반드시 확인하십시오."
  }
@@ -1492,7 +1492,7 @@ function buildForm(){
   document.getElementById("btnReset").textContent = t.btnReset;
   document.getElementById("btnPrint").textContent = t.btnPrint;
   document.getElementById("ctaTitle").textContent = t.ctaTitle;
-  document.getElementById("ctaText").innerHTML = t.ctaText.replace(/(nissimworks@gmail\.com|\+82 10-2755-6254)/g, "<a href=\"mailto:nissimworks@gmail.com\">$1</a>");
+  document.getElementById("ctaText").innerHTML = t.ctaText.replace(/(nissimworks@gmail\.com)/g, "<a href=\"mailto:nissimworks@gmail.com\">$1</a>");
   document.getElementById("foot").textContent = t.foot;
 
   document.getElementById("stageBox").innerHTML = t.stages.map(s=>
