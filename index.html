@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-title-en="한수 프로젝트 · Hansu Project | Two generations, one table" data-title-ko="한수 프로젝트 | 두 세대, 한 테이블">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>한수 프로젝트 · Hansu Project | Learn one move</title>
-<meta name="description" content="Busan's retired executives, one founder at a time. Six months, one named advisor, at no cost to the founder, plus a free tool that shows founders which public programs they can actually apply for.">
+<title>한수 프로젝트 · Hansu Project | Two generations, one table</title>
+<meta name="description" content="Busan's retired executives and its early-stage founders, at one table for six months. One named advisor, at no cost to the founder, plus a free Startup Support Navigator.">
 <meta name="theme-color" content="#2E7D6E">
 <link rel="canonical" href="https://nissimworks.github.io/hansu-project/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="한수 프로젝트 · Hansu Project">
-<meta property="og:title" content="한수 프로젝트 · Hansu Project | Learn one move">
-<meta property="og:description" content="Six months with one named senior advisor in Busan, at no cost to the founder, and a free bilingual tool for startup support programs.">
+<meta property="og:title" content="한수 프로젝트 · Hansu Project | Two generations, one table">
+<meta property="og:description" content="One retired executive, one founder, six months, at no cost to the founder. The founding circle is forming now.">
 <meta property="og:url" content="https://nissimworks.github.io/hansu-project/">
 <meta property="og:image" content="https://nissimworks.github.io/hansu-project/assets/og-cover.jpg">
 <meta property="og:image:width" content="1200">
@@ -23,513 +23,206 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=Noto+Serif+KR:wght@500;600;700&amp;display=swap" rel="stylesheet">
-<style>
-:root{
-  --jade:#2E7D6E; --jade-soft:#3C8A7B; --jade-deep:#255F54; --jade-tint:#E4F0EB;
-  --plum:#A03A5F; --plum-tint:#F7E7ED;
-  --ink:#1C1B1A; --muted:#5E5751; --cream:#FBF5E9; --card:#FFFDF7; --line:#E4DAC6; --lime:#C8D96F;
-  --radius:20px; --shadow:0 18px 50px rgba(28,27,26,.09);
-  --sans:"Noto Sans KR",Pretendard,"Apple SD Gothic Neo","Malgun Gothic",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --serif:"Noto Serif KR","Nanum Myeongjo",Georgia,"Times New Roman",serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:var(--jade-deep);text-decoration:none}
-a:hover{color:var(--plum)}
-h1,h2,h3,.serif{font-family:var(--serif);font-weight:700;line-height:1.25;letter-spacing:-.01em}
-.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-.skip{position:absolute;left:-9999px;top:0;background:var(--jade);color:#fff;padding:10px 16px;z-index:100}
-.skip:focus{left:12px;top:12px;border-radius:8px}
-:focus-visible{outline:3px solid var(--plum);outline-offset:3px;border-radius:4px}
-
-/* header */
-header.site{position:sticky;top:0;z-index:50;background:rgba(251,245,233,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.hrow{display:flex;align-items:center;gap:18px;min-height:66px}
-.brand{display:flex;align-items:center;gap:11px;flex:none}
-.brand img{width:40px;height:40px}
-.brand .nm{font-family:var(--serif);font-weight:700;color:var(--jade);font-size:17px;line-height:1.1}
-.brand .nm small{display:block;font-family:var(--sans);font-weight:500;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:3px}
-nav.main{display:flex;gap:22px;margin-left:auto;overflow-x:auto;scrollbar-width:none;-ms-overflow-style:none}
-nav.main::-webkit-scrollbar{display:none}
-nav.main a{font-size:14.5px;font-weight:500;color:var(--muted);white-space:nowrap}
-nav.main a:hover{color:var(--jade)}
-.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;flex:none;background:#fff}
-.lang button{background:none;border:0;font:inherit;font-size:12.5px;font-weight:700;padding:7px 13px;color:var(--muted);cursor:pointer}
-.lang button.on{background:var(--jade);color:#fff}
-
-/* hero */
-.hero{position:relative;overflow:hidden;padding:clamp(34px,6vw,76px) 0 clamp(30px,5vw,64px)}
-.hero:before{content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(rgba(46,125,110,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(46,125,110,.07) 1px,transparent 1px);
-  background-size:56px 56px;mask-image:radial-gradient(120% 90% at 70% 20%,#000 20%,transparent 78%)}
-.hero:after{content:"";position:absolute;right:-140px;top:-160px;width:520px;height:520px;border-radius:50%;
-  background:radial-gradient(circle at center,rgba(160,58,95,.13),rgba(160,58,95,0) 70%);pointer-events:none}
-.hgrid{position:relative;display:grid;grid-template-columns:1.08fr .92fr;gap:clamp(26px,4vw,54px);align-items:center}
-.kicker{display:inline-flex;align-items:center;gap:9px;font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--plum);margin:0 0 18px}
-.kicker i{width:7px;height:7px;border-radius:50%;background:var(--lime);display:inline-block}
-h1{margin:0;font-size:clamp(40px,7.2vw,74px);color:var(--jade-deep)}
-h1 .en{display:block;font-size:clamp(17px,2.4vw,23px);font-family:var(--sans);font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--plum);margin-top:12px}
-.lead{font-size:clamp(16.5px,2.1vw,19px);color:var(--muted);max-width:37em;margin:22px 0 0}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
-.btn{display:inline-flex;align-items:center;gap:9px;padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;line-height:1.2;border:1.5px solid transparent;transition:transform .15s ease,background .15s ease,color .15s ease,box-shadow .15s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn.primary{background:var(--jade);color:#fff;box-shadow:0 10px 24px rgba(46,125,110,.24)}
-.btn.primary:hover{background:var(--jade-deep);color:#fff}
-.btn.ghost{background:#fff;color:var(--jade-deep);border-color:var(--line)}
-.btn.ghost:hover{border-color:var(--jade);color:var(--jade-deep)}
-.btn.plum{background:var(--plum);color:#fff}
-.btn.plum:hover{background:#8C3053;color:#fff}
-.hero-art{position:relative;justify-self:center;width:100%;max-width:460px}
-.hero-art .frame{border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
-.hero-art .frame img{width:100%;height:auto}
-.hero-art .badge{position:absolute;left:-14px;bottom:-18px;width:104px;height:104px;border-radius:50%;background:var(--cream);
-  border:1px solid var(--line);box-shadow:0 12px 30px rgba(28,27,26,.14);display:grid;place-items:center}
-.hero-art .badge img{width:84px;height:84px}
-.stats{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:clamp(34px,5vw,52px) 0 0}
-.stats div{background:var(--card);padding:16px 18px}
-.stats b{display:block;font-family:var(--serif);font-size:clamp(20px,2.6vw,26px);color:var(--jade);line-height:1.2}
-.stats span{display:block;font-size:12.5px;color:var(--muted);margin-top:4px;line-height:1.45}
-
-/* sections */
-section{padding:clamp(46px,7vw,88px) 0}
-section.alt{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.eyebrow{display:block;font-size:12px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--plum);margin-bottom:12px}
-h2{font-size:clamp(26px,4vw,40px);color:var(--jade);margin:0 0 10px}
-.sub{font-size:clamp(16px,2vw,18.5px);color:var(--muted);max-width:44em;margin:0 0 34px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4vw,54px);align-items:start}
-.prose p{margin:0 0 16px;color:#37332F}
-.prose p:last-child{margin-bottom:0}
-.prose strong{color:var(--jade-deep)}
-.pull{border-left:4px solid var(--plum);padding:4px 0 4px 20px;margin:26px 0;font-family:var(--serif);font-size:19px;line-height:1.6;color:var(--jade-deep)}
-figure{margin:0}
-figure img{border-radius:18px;border:1px solid var(--line);box-shadow:var(--shadow)}
-figcaption{font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.5}
-
-/* pillars */
-.pillars{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.pillar{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,3vw,32px);position:relative;overflow:hidden}
-.pillar:before{content:"";position:absolute;inset:0 auto 0 0;width:5px;background:var(--jade)}
-.pillar.p2:before{background:var(--plum)}
-.pillar h3{font-size:22px;color:var(--jade);margin:0 0 4px;padding-left:6px}
-.pillar .who{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--plum);padding-left:6px;margin-bottom:14px}
-.pillar p{color:#37332F;margin:0 0 14px;padding-left:6px}
-.pillar ul{margin:0;padding:0 0 0 26px;color:var(--muted);font-size:15px}
-.pillar li{margin:7px 0}
-.pillar .go{display:inline-block;margin-top:18px;margin-left:6px;font-weight:700;font-size:14.5px}
-
-/* video */
-.video-wrap{background:var(--jade-deep);border-radius:24px;padding:clamp(18px,3vw,34px);box-shadow:var(--shadow);position:relative;overflow:hidden}
-.video-wrap:before{content:"";position:absolute;inset:0;pointer-events:none;
-  background-image:linear-gradient(rgba(251,245,233,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(251,245,233,.08) 1px,transparent 1px);background-size:40px 40px}
-.video-wrap video{width:100%;height:auto;border-radius:14px;display:block;background:#12211D;position:relative;z-index:1}
-.video-meta{position:relative;z-index:1;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:space-between;margin-top:16px;color:#DDEBE5;font-size:13px}
-.video-meta .dot{color:var(--lime);font-weight:700}
-
-/* numbers */
-.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
-.num{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
-.num b{display:block;font-family:var(--serif);font-size:32px;color:var(--plum);line-height:1.1}
-.num span{display:block;font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.5}
-
-/* navigator band */
-.band{background:linear-gradient(160deg,#2E7D6E,#255F54);color:#fff;border-radius:24px;padding:clamp(26px,4vw,44px);display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:center;position:relative;overflow:hidden}
-.band:after{content:"";position:absolute;right:-90px;bottom:-120px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle at center,rgba(200,217,111,.25),rgba(200,217,111,0) 70%)}
-.band h2{color:#fff;margin-bottom:8px;font-size:clamp(24px,3.4vw,34px)}
-.band p{color:#DCEBE5;margin:0;max-width:34em}
-.band .btn{justify-self:end;background:var(--cream);color:var(--jade-deep)}
-.band .btn:hover{background:#fff;color:var(--jade-deep)}
-.band .note{color:#C7DDD5;font-size:13px;margin-top:14px}
-
-/* join */
-.join{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(20px,2.6vw,28px);display:flex;flex-direction:column}
-.card h3{font-size:20px;color:var(--jade);margin:0 0 2px}
-.card .kr{font-size:13px;color:var(--plum);font-weight:700;letter-spacing:.06em;margin-bottom:12px}
-.card p{font-size:15px;color:#37332F;margin:0 0 18px;flex:1}
-.card .btn{justify-content:center}
-.note-line{display:flex;gap:10px;align-items:flex-start;background:var(--plum-tint);border:1px solid #EBCBD8;border-radius:14px;padding:14px 18px;margin-top:24px;font-size:14px;color:#5E2C41}
-.note-line b{color:var(--plum)}
-
-/* faq */
-details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 20px;margin-bottom:12px}
-details summary{cursor:pointer;font-weight:700;color:var(--jade-deep);font-size:16px;list-style:none}
-details summary::-webkit-details-marker{display:none}
-details summary:after{content:"+";float:right;color:var(--plum);font-weight:700;transition:transform .18s ease}
-details[open] summary:after{transform:rotate(45deg)}
-details p{margin:12px 0 0;color:var(--muted);font-size:15px}
-
-/* footer */
-footer.site{background:#fff;border-top:1px solid var(--line);padding:44px 0 60px;font-size:14px;color:var(--muted)}
-.fgrid{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-start}
-.fbrand{display:flex;gap:12px;align-items:center}
-.fbrand img{width:52px;height:52px}
-.fbrand b{display:block;font-family:var(--serif);color:var(--jade);font-size:16px}
-.fbrand span{font-size:12.5px}
-.flinks{display:flex;flex-wrap:wrap;gap:8px 22px}
-.flinks a{color:var(--muted);font-weight:500}
-.flinks a:hover{color:var(--jade)}
-.legal{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
-
-@media (max-width:900px){
-  .hgrid{grid-template-columns:1fr}
-  .hero-art{order:-1;max-width:420px}
-  .two{grid-template-columns:1fr}
-  .pillars{grid-template-columns:1fr}
-  .nums{grid-template-columns:1fr 1fr}
-  .band{grid-template-columns:1fr}
-  .band .btn{justify-self:start}
-  .join{grid-template-columns:1fr}
-  .hrow{flex-wrap:wrap;padding-top:8px;padding-bottom:2px}
-  nav.main{order:3;flex:1 0 100%;margin:0;padding:0 0 8px;gap:18px}
-  nav.main a{font-size:13.5px}
-}
-@media (max-width:560px){
-  body{font-size:16px}
-  .stats{grid-template-columns:1fr 1fr}
-  .wrap{padding:0 18px}
-  .hrow{gap:10px;min-height:56px;align-items:center}
-  nav.main{flex:1 0 100%;padding-bottom:6px}
-  .hero-art .badge{width:78px;height:78px;left:-8px;bottom:-12px}
-  .hero-art .badge img{width:62px;height:62px}
-}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  .btn:hover{transform:none}
-}
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 <a class="skip" href="#main" data-en="Skip to content" data-ko="본문으로 건너뛰기">Skip to content</a>
 
 <header class="site">
   <div class="wrap hrow">
-    <a class="brand" href="#top" aria-label="한수 프로젝트 Hansu Project">
-      <img src="assets/hansu-logo-64.png" alt="한수 프로젝트 circular emblem" width="40" height="40">
+    <a class="brand" href="index.html" aria-label="한수 프로젝트 Hansu Project">
+      <img src="assets/hansu-logo-64.png" alt="한수 프로젝트 circular emblem" width="42" height="42">
       <span class="nm">한수 프로젝트<small>Hansu Project</small></span>
     </a>
     <nav class="main" aria-label="Main">
-      <a href="#story" data-en="About" data-ko="소개">About</a>
-      <a href="#program" data-en="Program" data-ko="사업">Program</a>
-      <a href="#video" data-en="Video" data-ko="영상">Video</a>
+      <a href="index.html" aria-current="page" data-en="Home" data-ko="홈">Home</a>
+      <a href="founders.html" data-en="Founders" data-ko="창업가">Founders</a>
+      <a href="seniors.html" data-en="Senior executives" data-ko="선배 경영인">Senior executives</a>
+      <a href="about.html" data-en="About us" data-ko="소개">About us</a>
       <a href="navigator.html" data-en="Navigator" data-ko="내비게이터">Navigator</a>
-      <a href="#join" data-en="Join" data-ko="참여">Join</a>
+      <a class="join-link" href="join.html" data-en="Join" data-ko="참여">Join</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-lang="en" class="on">EN</button>
-      <button type="button" data-lang="ko">한국어</button>
+      <button type="button" data-lang="en" class="on" aria-pressed="true">EN</button>
+      <button type="button" data-lang="ko" aria-pressed="false">한국어</button>
     </div>
   </div>
 </header>
 
 <main id="main">
-<section class="hero" id="top">
+
+<section class="hero board-bg" id="top">
   <div class="wrap hgrid">
     <div>
-      <p class="kicker"><i></i><span data-en="Busan, Republic of Korea · 2027" data-ko="부산광역시 · 2027">Busan, Republic of Korea · 2027</span></p>
-      <h1>한 수 배우다<span class="en">Learn one move</span></h1>
-      <p class="lead" data-en="Busan's retired executives, one founder at a time. Six months with one named advisor, at no cost to the founder, and a free tool that shows any founder which public programs they can actually apply for." data-ko="부산의 선배 경영인이 초기 창업자 한 사람과 6개월을 함께합니다. 창업자에게 비용은 없습니다. 어떤 공공사업에 실제로 신청할 수 있는지 보여 주는 무료 도구도 함께 운영합니다.">Busan's retired executives, one founder at a time. Six months with one named advisor, at no cost to the founder, and a free tool that shows any founder which public programs they can actually apply for.</p>
+      <p class="kicker"><span class="stones"><i></i><i></i></span><span data-en="Busan, Republic of Korea" data-ko="부산광역시">Busan, Republic of Korea</span></p>
+      <h1 data-en="Two generations, one table" data-ko="두 세대, 한 테이블">Two generations, one table</h1>
+      <span class="h1-ko" aria-hidden="true">두 세대, 한 테이블</span>
+
+      <div class="story">
+        <p data-en="Somebody ate something bad once. You did not, because they told you. That is how humans have always learned: one mistake, passed on, so the next person does not have to learn it the hard way." data-ko="누군가 한 번 상한 음식을 먹었습니다. 당신은 먹지 않았습니다. 그 사람이 알려 줬기 때문입니다. 인간은 오래전부터 그렇게 배워 왔습니다. 한 사람의 실수가 다음 사람에게는 더 쉬운 길이 되도록 물려주는 방식으로.">Somebody ate something bad once. You did not, because they told you. That is how humans have always learned: one mistake, passed on, so the next person does not have to learn it the hard way.</p>
+        <p data-en="We do not think it should stop at what not to eat." data-ko="우리는 그것이 무엇을 먹지 말아야 하는지에서 멈춰서는 안 된다고 생각합니다.">We do not think it should stop at what not to eat.</p>
+        <p data-en="Today's founders come with a deep technical education and little idea how to run a business, build a partnership or belong to a community. The people who know that in their bones are retired in this city, with nowhere to put it." data-ko="오늘의 창업자는 기술 교육은 깊지만, 사업을 운영하는 법도, 파트너십을 만드는 법도, 커뮤니티에 속하는 법도 배우지 못했습니다. 그것을 몸으로 아는 분들은 이 도시에서 은퇴했고, 그 지식을 쓸 자리가 없습니다.">Today's founders come with a deep technical education and little idea how to run a business, build a partnership or belong to a community. The people who know that in their bones are retired in this city, with nowhere to put it.</p>
+        <p data-en="So we sit them at one table. One brings thirty years of business, partnerships and community. The other brings the technology that person never had. Both go home with something." data-ko="그래서 두 사람을 한 테이블에 앉힙니다. 한 사람은 서른 해의 사업과 인맥과 지역사회를 가져옵니다. 다른 사람은 그가 가져본 적 없는 기술을 가져옵니다. 둘 다 무언가를 얻고 돌아갑니다.">So we sit them at one table. One brings thirty years of business, partnerships and community. The other brings the technology that person never had. Both go home with something.</p>
+        <p data-en="The founder stays in Busan, because now there is a reason to." data-ko="창업자는 부산에 남습니다. 남을 이유가 생겼기 때문입니다.">The founder stays in Busan, because now there is a reason to.</p>
+      </div>
+
+      <div class="ko-block" lang="ko">
+        <span class="lab">한국어</span>
+        <p>누군가 한 번 상한 음식을 먹었습니다. 당신은 먹지 않았습니다. 그 사람이 알려 줬기 때문입니다. 인간은 오래전부터 그렇게 배워 왔습니다. 한 사람의 실수가 다음 사람에게는 더 쉬운 길이 되도록 물려주는 방식으로.</p>
+        <p>우리는 그것이 무엇을 먹지 말아야 하는지에서 멈춰서는 안 된다고 생각합니다.</p>
+        <p>오늘의 창업자는 기술 교육은 깊지만, 사업을 운영하는 법도, 파트너십을 만드는 법도, 커뮤니티에 속하는 법도 배우지 못했습니다. 그것을 몸으로 아는 분들은 이 도시에서 은퇴했고, 그 지식을 쓸 자리가 없습니다.</p>
+        <p>그래서 두 사람을 한 테이블에 앉힙니다. 한 사람은 서른 해의 사업과 인맥과 지역사회를 가져옵니다. 다른 사람은 그가 가져본 적 없는 기술을 가져옵니다. 둘 다 무언가를 얻고 돌아갑니다.</p>
+        <p>창업자는 부산에 남습니다. 남을 이유가 생겼기 때문입니다.</p>
+      </div>
+
       <div class="cta">
-        <a class="btn primary" data-form="founder" href="mailto:nissimworks@gmail.com?subject=Hansu%20Project%20%C2%B7%20Founder%20application" data-en="Apply as a founder" data-ko="창업가로 신청하기">Apply as a founder</a>
-        <a class="btn ghost" data-form="senior" href="mailto:nissimworks@gmail.com?subject=Hansu%20Project%20%C2%B7%20Senior%20executive%20interest" data-en="Join as a senior executive" data-ko="선배 경영인으로 참여하기">Join as a senior executive</a>
-        <a class="btn ghost" href="#video" data-en="Watch the film" data-ko="영상 보기">Watch the film</a>
-      </div>
-      <div class="stats">
-        <div><b>6</b><span data-en="months, one cohort" data-ko="개월, 한 기수">months, one cohort</span></div>
-        <div><b>2 × 90</b><span data-en="minutes a month" data-ko="분, 한 달 두 번">minutes a month</span></div>
-        <div><b data-en="0 KRW" data-ko="0원">0 KRW</b><span data-en="cost to a founder" data-ko="창업자 부담">cost to a founder</span></div>
-        <div><b>27</b><span data-en="programs in the navigator" data-ko="개 지원사업, 무료">programs in the navigator</span></div>
+        <a class="btn primary" href="founders.html" data-en="I am a founder" data-ko="창업가입니다">I am a founder</a>
+        <a class="btn ghost" href="seniors.html" data-en="I am a senior executive" data-ko="선배 경영인입니다">I am a senior executive</a>
+        <a class="btn ghost" href="#film" data-en="Watch the film" data-ko="영상 보기">Watch the film</a>
       </div>
     </div>
-    <div class="hero-art">
+
+    <figure class="hero-art">
       <div class="frame">
-        <img src="assets/hero-mentorship.jpg" alt="A retired executive and a young founder playing baduk by a window in Busan" width="1376" height="768">
+        <img src="assets/hero-mentorship.jpg" alt="A retired executive and a young founder playing baduk together by a window in Busan" width="1376" height="768">
       </div>
-      <div class="badge"><img src="assets/hansu-logo-256.png" alt="한수 프로젝트 emblem" width="84" height="84"></div>
-    </div>
+      <div class="badge"><img src="assets/hansu-logo-256.png" alt="한수 프로젝트 emblem" width="86" height="86"></div>
+      <figcaption data-en="One board, two chairs, no classroom. Busan, 2026." data-ko="바둑판 하나, 의자 둘, 강의실은 없습니다. 부산, 2026년.">One board, two chairs, no classroom. Busan, 2026.</figcaption>
+    </figure>
   </div>
 </section>
 
-<section id="story" class="alt">
+<section class="alt" id="what">
   <div class="wrap">
-    <span class="eyebrow" data-en="About us" data-ko="한수 프로젝트 소개">About us</span>
-    <h2 data-en="The city has the money. It does not have the person who answers the phone." data-ko="도시에는 자금이 있습니다. 전화를 받아 주는 사람이 없을 뿐입니다.">The city has the money. It does not have the person who answers the phone.</h2>
-    <div class="two" style="margin-top:26px">
+    <div class="split wide-left">
       <div class="prose">
-        <p data-en="Busan holds about KRW 1.57 trillion in startup funds and ranks among the world's top 70 emerging startup ecosystems. A founder here can find a grant, a desk and a class. What almost none can find is one experienced person who remembers last month's problem and picks up the phone." data-ko="부산은 약 1조 5,700억 원의 창업 펀드를 보유하고 있으며, 세계 70위권 신생 창업 생태계에 속합니다. 창업자는 지원금도, 자리도, 교육도 찾을 수 있습니다. 그러나 지난달의 고민을 기억하고 전화를 받아 주는 경험 많은 사람은 거의 없습니다.">Busan holds about KRW 1.57 trillion in startup funds and ranks among the world's top 70 emerging startup ecosystems. A founder here can find a grant, a desk and a class. What almost none can find is one experienced person who remembers last month's problem and picks up the phone.</p>
-        <p data-en="Retired executives in this city have exactly that experience, and no structured way to use it. 한수 프로젝트 (Hansu Project) is the structure. We vet and train the senior executives, match each of them with a founder, and handle everything except the conversation." data-ko="이 도시의 선배 경영인에게는 바로 그 경험이 있습니다. 다만 그것을 쓸 구조가 없습니다. 한수 프로젝트가 그 구조입니다. 선배 경영인을 검증하고 교육하며, 창업자와 연결하고, 대화를 제외한 나머지를 맡습니다.">Retired executives in this city have exactly that experience, and no structured way to use it. 한수 프로젝트 (Hansu Project) is the structure. We vet and train the senior executives, match each of them with a founder, and handle everything except the conversation.</p>
-        <p class="pull" data-en="한수 is a move in baduk. 한 수 배우다, to learn one move from someone who plays better, is an ordinary phrase in Korean. We took it literally." data-ko="한수는 바둑에서 돌을 한 번 두는 수를 뜻합니다. 한 수 배우다는 잘 두는 사람에게 한 수를 배운다는 뜻의 평범한 한국어입니다. 사업은 이 말을 그대로 합니다.">한수 is a move in baduk. 한 수 배우다, to learn one move from someone who plays better, is an ordinary phrase in Korean. We took it literally.</p>
-        <p data-en="The two sides sit on one board. One has played longer, and that is the only difference we recognise." data-ko="양쪽은 같은 바둑판에 앉습니다. 한쪽이 더 오래 두었을 뿐, 우리가 인정하는 차이는 그것뿐입니다.">The two sides sit on one board. One has played longer, and that is the only difference we recognise.</p>
+        <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="What this is" data-ko="사업 소개">What this is</span></span>
+        <h2 data-en="One advisor. Six months. No cost." data-ko="조언자 한 사람. 6개월. 비용 없음.">One advisor. Six months. No cost.</h2>
+        <p data-en="한수 프로젝트 connects one retired executive in Busan with one early-stage founder for six months. They meet twice a month for ninety minutes, in person or online. The founder pays nothing. The executive is not paid. No equity changes hands and no money passes in either direction." data-ko="한수 프로젝트는 부산의 은퇴한 선배 경영인 한 분과 초기 창업자 한 명을 6개월 동안 연결합니다. 한 달에 두 번, 90분씩 대면 또는 비대면으로 만납니다. 창업자는 비용을 내지 않고, 선배 경영인은 보수를 받지 않습니다. 지분도, 어느 방향으로든 금전 거래도 없습니다.">한수 프로젝트 connects one retired executive in Busan with one early-stage founder for six months. They meet twice a month for ninety minutes, in person or online. The founder pays nothing. The executive is not paid. No equity changes hands and no money passes in either direction.</p>
+        <p data-en="We vet and prepare the executive, make the match, hold the schedule and keep the notes. The two of them do the only part that cannot be delegated: the conversation." data-ko="저희는 선배 경영인을 검증하고 준비시키며, 매칭과 일정과 기록을 맡습니다. 두 분은 위임할 수 없는 단 하나의 일, 대화를 합니다.">We vet and prepare the executive, make the match, hold the schedule and keep the notes. The two of them do the only part that cannot be delegated: the conversation.</p>
+        <blockquote class="pull">
+          <span data-en="You have the experience. I have access to the next generation. Neither of us can solve this problem alone." data-ko="경험은 선배님께 있습니다. 다음 세대와 연결되는 일은 제가 합니다. 이 문제는 어느 한쪽만으로는 풀리지 않습니다.">You have the experience. I have access to the next generation. Neither of us can solve this problem alone.</span>
+          <small data-en="Nofar Lupo, founder of 한수 프로젝트" data-ko="한수 프로젝트를 만든 루포 노파르">Nofar Lupo, founder of 한수 프로젝트</small>
+        </blockquote>
       </div>
-      <figure>
-        <img src="assets/story-two-panels.jpg" alt="Left: a retired executive at home with a baduk board. Right: a young founder at a laptop late at night." width="1024" height="1024">
-        <figcaption data-en="Two rooms in the same city, November 2026. 한수 프로젝트 puts them at one board." data-ko="같은 도시의 두 방, 2026년 11월. 한수 프로젝트는 두 사람을 한 바둑판에 앉힙니다.">Two rooms in the same city, November 2026. 한수 프로젝트 puts them at one board.</figcaption>
-      </figure>
-    </div>
-    <div class="two" style="margin-top:38px">
-      <div class="card" style="flex:none">
-        <h3 data-en="Who is who" data-ko="부르는 이름">Who is who</h3>
-        <p data-en="한수 선배 경영인 for the retired executives. 한수 창업가 for the founders. 동문 for both sides once a cohort finishes. We do not use the words mentor and mentee as titles: one has played longer, and both are responsible for the game." data-ko="은퇴한 경영인은 한수 선배 경영인, 창업자는 한수 창업가라고 부릅니다. 기수가 끝난 뒤에는 양쪽 모두 동문입니다. 멘토와 멘티는 호칭으로 쓰지 않습니다. 한쪽이 더 오래 두었을 뿐, 판은 두 사람이 함께 만듭니다.">한수 선배 경영인 for the retired executives. 한수 창업가 for the founders. 동문 for both sides once a cohort finishes. We do not use the words mentor and mentee as titles: one has played longer, and both are responsible for the game.</p>
+      <div>
+        <div class="stats">
+          <div><b>6</b><span data-en="months, one relationship" data-ko="개월, 한 관계">months, one relationship</span></div>
+          <div><b>2 × 90</b><span data-en="minutes a month" data-ko="분, 한 달 두 번">minutes a month</span></div>
+          <div><b>0 KRW</b><span data-en="cost to the founder" data-ko="창업자 부담">cost to the founder</span></div>
+          <div><b>1 : 1</b><span data-en="one named advisor" data-ko="이름이 있는 조언자 한 사람">one named advisor</span></div>
+        </div>
+        <div class="note">
+          <b data-en="Founding stage." data-ko="창립 단계입니다.">Founding stage.</b>
+          <span data-en=" One person runs the program today. The founding circle has three seats for senior executives and two of them are open. The first full cohort follows the pilot." data-ko=" 지금 이 일을 하는 사람은 한 명입니다. 창립 서클은 선배 경영인 자리 세 개로 시작하며, 두 자리가 비어 있습니다. 정식 1기는 시범 운영 뒤에 시작합니다."> One person runs the program today. The founding circle has three seats for senior executives and two of them are open. The first full cohort follows the pilot.</span>
+        </div>
       </div>
-      <div class="card" style="flex:none">
-        <h3 data-en="Who runs it" data-ko="운영">Who runs it</h3>
-        <p data-en="닛심워크 (Nissim Work), a consulting company in Busan, designs and operates the program. It is founded and run by Nofar Lupo, one person today. The founding circle has three seats for founding senior executives and two of them are still open, so the first full cohort follows the pilot. Applications and questions come to a person, not a form queue." data-ko="부산의 컨설팅 회사인 닛심워크(Nissim Work)가 사업을 설계하고 운영합니다. 지금 이 일을 하는 사람은 루포 노파르 한 명입니다. 창립 서클은 선배 경영인 자리 세 개로 시작하며, 두 자리는 아직 비어 있습니다. 정식 1기는 시범 운영 뒤에 시작합니다. 신청과 문의는 서류 대기열이 아니라 사람에게 도착합니다.">닛심워크 (Nissim Work), a consulting company in Busan, designs and operates the program. It is founded and run by Nofar Lupo, one person today. The founding circle has three seats for founding senior executives and two of them are still open, so the first full cohort follows the pilot. Applications and questions come to a person, not a form queue.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="program">
-  <div class="wrap">
-    <span class="eyebrow" data-en="The program" data-ko="사업 구조">The program</span>
-    <h2 data-en="Two pillars, one purpose" data-ko="두 개의 기둥, 하나의 목적">Two pillars, one purpose</h2>
-    <p class="sub" data-en="A person for the founder, and a tool for every founder in the city. The person is slow and deep. The tool is fast and free." data-ko="창업자 한 사람에게는 사람을, 도시의 모든 창업자에게는 도구를 드립니다. 사람은 느리고 깊게, 도구는 빠르고 무료로.">A person for the founder, and a tool for every founder in the city. The person is slow and deep. The tool is fast and free.</p>
-    <div class="pillars">
-      <article class="pillar">
-        <div class="who" data-en="Pillar one" data-ko="첫 번째 기둥">Pillar one</div>
-        <h3 data-en="한수 선배 경영인, one to one" data-ko="한수 선배 경영인, 1대1 연결">한수 선배 경영인, one to one</h3>
-        <p data-en="Retired executives, sixty and over, with fifteen or more years of operating responsibility. We vet them, train them, and match each one with one or two founders for six months." data-ko="만 60세 이상, 15년 이상 조직을 운영한 경영인입니다. 검증과 교육을 거쳐 창업자 한두 명과 6개월 동안 연결합니다.">Retired executives, sixty and over, with fifteen or more years of operating responsibility. We vet them, train them, and match each one with one or two founders for six months.</p>
-        <ul>
-          <li data-en="Two ninety-minute sessions a month, in person or online" data-ko="한 달 두 번, 90분씩 대면 또는 온라인">Two ninety-minute sessions a month, in person or online</li>
-          <li data-en="A review at month three: continue, change, or stop" data-ko="3개월 차 점검: 계속, 교체, 종료">A review at month three: continue, change, or stop</li>
-          <li data-en="No money in either direction, and no investment for twelve months after" data-ko="어느 방향으로도 금전이 오가지 않으며, 종료 후 12개월간 투자도 하지 않습니다">No money in either direction, and no investment for twelve months after</li>
-          <li data-en="Scheduling, space and notes are handled by one person, not a queue" data-ko="일정, 공간, 기록은 대기열이 아니라 한 사람이 맡습니다">Scheduling, space and notes are handled by one person, not a queue</li>
-        </ul>
-      </article>
-      <article class="pillar p2">
-        <div class="who" data-en="Pillar two" data-ko="두 번째 기둥">Pillar two</div>
-        <h3 data-en="Startup Support Navigator" data-ko="창업지원 내비게이터">Startup Support Navigator</h3>
-        <p data-en="A free bilingual tool that shows a founder which Busan and national programs they can actually apply for, what each one pays, and how to apply. No login, no data collected, no per-user cost." data-ko="부산과 국가 지원사업 가운데 실제로 신청할 수 있는 것을 보여 주는 무료 도구입니다. 각 사업의 지원 내용과 신청 방법을 함께 표시합니다. 로그인도, 개인정보 수집도, 사용자당 비용도 없습니다.">A free bilingual tool that shows a founder which Busan and national programs they can actually apply for, what each one pays, and how to apply. No login, no data collected, no per-user cost.</p>
-        <ul>
-          <li data-en="27 programs, filtered by age, stage, district and sector" data-ko="27개 사업을 나이, 단계, 자치구, 업종으로 필터링">27 programs, filtered by age, stage, district and sector</li>
-          <li data-en="Every card carries the date it was last checked" data-ko="모든 카드에 마지막 확인 날짜를 표시">Every card carries the date it was last checked</li>
-          <li data-en="Foreign founders get the same answer, not a footnote" data-ko="외국인 창업자도 같은 결과를 봅니다, 각주가 아니라">Foreign founders get the same answer, not a footnote</li>
-        </ul>
-        <a class="go" href="navigator.html" data-en="Open the navigator" data-ko="내비게이터 열기">Open the navigator</a>
-      </article>
     </div>
   </div>
 </section>
 
-<section id="video" class="alt">
+<section id="film">
   <div class="wrap">
-    <span class="eyebrow" data-en="The film" data-ko="영상">The film</span>
-    <h2 data-en="One board, one move, eight seconds" data-ko="한 바둑판, 한 수, 8초">One board, one move, eight seconds</h2>
+    <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="The film" data-ko="영상">The film</span></span>
+    <h2 data-en="One board, one move" data-ko="한 바둑판, 한 수">One board, one move</h2>
     <p class="sub" data-en="A retired executive sets a stone. A founder answers with her own. The rest of the program is built around that exchange: listen, answer, stay." data-ko="선배 경영인이 돌을 놓습니다. 창업자가 자기 돌로 답합니다. 나머지 사업은 이 주고받음, 곧 듣고, 답하고, 곁에 남는 일을 중심으로 설계했습니다.">A retired executive sets a stone. A founder answers with her own. The rest of the program is built around that exchange: listen, answer, stay.</p>
-    <div class="video-wrap">
-      <video id="film" controls playsinline muted preload="metadata" poster="assets/hansu-explainer-poster.jpg" width="1280" height="720" aria-label="한수 프로젝트 brand film">
+    <div class="video-panel">
+      <video id="film-video" controls playsinline preload="metadata" poster="assets/hansu-explainer-poster.jpg" width="1280" height="720" aria-label="한수 프로젝트 brand film">
         <source src="assets/hansu-explainer.mp4" type="video/mp4">
         <span data-en="Your browser cannot play this video." data-ko="이 브라우저에서는 영상을 재생할 수 없습니다.">Your browser cannot play this video.</span>
       </video>
       <div class="video-meta">
-        <span data-en="한수 프로젝트 brand film · 8 seconds · made in November 2026" data-ko="한수 프로젝트 브랜드 영상 · 8초 · 2026년 11월 제작">한수 프로젝트 brand film · 8 seconds · made in November 2026</span>
+        <span data-en="한수 프로젝트 brand film · November 2026" data-ko="한수 프로젝트 브랜드 영상 · 2026년 11월">한수 프로젝트 brand film · November 2026</span>
         <span class="dot" data-en="Sound on" data-ko="소리 있음">Sound on</span>
       </div>
     </div>
   </div>
 </section>
 
-<section id="numbers">
+<section class="alt" id="paths">
   <div class="wrap">
-    <span class="eyebrow" data-en="The first year" data-ko="첫해 계획">The first year</span>
-    <h2 data-en="Small on purpose, and measured" data-ko="의도적으로 작게, 그리고 측정 가능하게">Small on purpose, and measured</h2>
-    <p class="sub" data-en="We would rather start with three serious founding executives than thirty curious ones, and grow to ten as the pilot proves itself. These are the first-year targets, published and checked every year." data-ko="호기심 많은 30명보다 진지한 창립 서클 세 분으로 시작하고, 시범 운영이 증명되면 열 분까지 늘립니다. 아래는 첫해 목표이며, 해마다 공개하고 점검합니다.">We would rather start with three serious founding executives than thirty curious ones, and grow to ten as the pilot proves itself. These are the first-year targets, published and checked every year.</p>
-    <div class="nums">
-      <div class="num"><b data-en="Founding circle" data-ko="창립 서클">Founding circle</b><span data-en="Three seats for founding senior executives, two still open" data-ko="선배 경영인 자리 세 개, 그중 두 자리 모집 중">Three seats for founding senior executives, two still open</span></div>
-      <div class="num"><b>30</b><span data-en="Senior executives vetted and trained in year one" data-ko="첫해 검증과 교육을 마치는 선배 경영인">Senior executives vetted and trained in year one</span></div>
-      <div class="num"><b>40</b><span data-en="Matched relationships in the first twelve months" data-ko="첫 12개월 동안의 매칭">Matched relationships in the first twelve months</span></div>
-      <div class="num"><b>4</b><span data-en="Cohort sessions a year, with a public report" data-ko="연 4회 기수 세션과 공개 보고서">Cohort sessions a year, with a public report</span></div>
+    <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="Two ways in" data-ko="두 갈래 길">Two ways in</span></span>
+    <h2 data-en="Which side of the table are you on?" data-ko="테이블의 어느 쪽에 계십니까?">Which side of the table are you on?</h2>
+    <p class="sub" data-en="The same program, described for the person you are. Each page answers the questions that side actually asks." data-ko="같은 사업을, 계신 자리에서 필요한 말로 설명합니다. 각 페이지는 그쪽에서 실제로 묻는 질문에 답합니다.">The same program, described for the person you are. Each page answers the questions that side actually asks.</p>
+    <div class="paths">
+      <a class="path" href="founders.html">
+        <div class="lab" data-en="For founders" data-ko="창업가에게">For founders</div>
+        <h3 data-en="You are building the company" data-ko="회사를 만들고 계신다면">You are building the company</h3>
+        <p data-en="You can build the product. The other half, customers, pricing, partners, hiring, is learned from someone who has already made the mistake. Six months with that person, free, and a tool that finds the public programs you can actually use." data-ko="제품은 만들 수 있습니다. 나머지 절반, 곧 고객과 가격과 파트너와 채용은 그 실수를 이미 해 본 사람에게 배웁니다. 그런 사람과의 6개월, 비용 없이. 실제로 신청할 수 있는 공공사업을 찾아 주는 도구도 함께 드립니다.">You can build the product. The other half, customers, pricing, partners, hiring, is learned from someone who has already made the mistake. Six months with that person, free, and a tool that finds the public programs you can actually use.</p>
+        <span class="go" data-en="Go to Founders" data-ko="창업가 페이지로">Go to Founders</span>
+      </a>
+      <a class="path p2" href="seniors.html">
+        <div class="lab" data-en="For senior executives" data-ko="선배 경영인에게">For senior executives</div>
+        <h3 data-en="You ran something for years" data-ko="오랫동안 조직을 운영하셨다면">You ran something for years</h3>
+        <p data-en="One founder needs exactly what you learned. Four to six hours a month for six months. We find the founder, prepare the ground, handle the schedule and the paperwork. You do the conversation." data-ko="한 창업자에게는 선배님이 배우신 것이 꼭 필요합니다. 6개월 동안 한 달 네 시간에서 여섯 시간. 창업자를 찾고, 준비하고, 일정과 서류를 맡습니다. 선배님은 대화만 하십니다.">One founder needs exactly what you learned. Four to six hours a month for six months. We find the founder, prepare the ground, handle the schedule and the paperwork. You do the conversation.</p>
+        <span class="go" data-en="Go to Senior executives" data-ko="선배 경영인 페이지로">Go to Senior executives</span>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="alt" id="navigator">
+<section class="tight" id="how">
   <div class="wrap">
-    <span class="eyebrow" data-en="Free tool" data-ko="무료 도구">Free tool</span>
-    <div class="band">
-      <div>
-        <h2 data-en="Which programs can I actually apply for?" data-ko="나는 어떤 사업에 신청할 수 있을까요?">Which programs can I actually apply for?</h2>
-        <p data-en="Answer six questions, get a short list with the amount, the window and the link. It runs in the browser, keeps nothing, and works on a phone." data-ko="여섯 가지만 고르면 지원 금액, 신청 기간, 신청 링크가 담긴 짧은 목록이 나옵니다. 브라우저 안에서만 동작하고 아무것도 저장하지 않으며, 휴대전화에서도 열립니다.">Answer six questions, get a short list with the amount, the window and the link. It runs in the browser, keeps nothing, and works on a phone.</p>
-        <p class="note" data-en="No login, no email, no data collected. Korean and English." data-ko="로그인 없음, 이메일 없음, 수집하는 개인정보 없음. 한국어와 영어.">No login, no email, no data collected. Korean and English.</p>
+    <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="How it works" data-ko="진행 방식">How it works</span></span>
+    <h2 data-en="Three steps, then six months" data-ko="세 단계, 그다음 6개월">Three steps, then six months</h2>
+    <div class="steps">
+      <div class="step">
+        <h3 data-en="Write to us" data-ko="먼저 편지를 주십시오">Write to us</h3>
+        <p data-en="One page about you and the decision in front of you. Korean or English, whichever you think in." data-ko="본인과 지금 마주한 결정에 대한 한 장입니다. 한국어로도 영어로도 좋습니다.">One page about you and the decision in front of you. Korean or English, whichever you think in.</p>
       </div>
-      <a class="btn" href="navigator.html" data-en="Open the navigator" data-ko="내비게이터 열기">Open the navigator</a>
+      <div class="step">
+        <h3 data-en="Meet, then choose" data-ko="만나고, 고르십시오">Meet, then choose</h3>
+        <p data-en="A thirty-minute introduction. The founder chooses the advisor. Nobody is assigned." data-ko="30분 소개 면담입니다. 조언자는 창업자가 고릅니다. 일방적으로 배정하지 않습니다.">A thirty-minute introduction. The founder chooses the advisor. Nobody is assigned.</p>
+      </div>
+      <div class="step">
+        <h3 data-en="Six months" data-ko="6개월">Six months</h3>
+        <p data-en="Two sessions a month, a review at month three, a written record at the end." data-ko="한 달 두 번의 면담, 3개월 차 점검, 마지막에 남는 기록.">Two sessions a month, a review at month three, a written record at the end.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section id="join">
-  <div class="wrap">
-    <span class="eyebrow" data-en="Connect and join" data-ko="참여하기">Connect and join</span>
-    <h2 data-en="Three ways to start" data-ko="세 가지 시작">Three ways to start</h2>
-    <p class="sub" data-en="Write to us in Korean or English. Every message reaches a person, and we answer within two working days." data-ko="한국어로도 영어로도 보내 주십시오. 모든 메일에 사람이 답하며, 두 영업일 안에 회신합니다.">Write to us in Korean or English. Every message reaches a person, and we answer within two working days.</p>
-    <div class="join">
-      <article class="card">
-        <h3 data-en="Senior executives" data-ko="선배 경영인">Senior executives</h3>
-        <div class="kr">한수 선배 경영인</div>
-        <p data-en="Sixty or over, fifteen or more years of operating responsibility, and four to six hours a month. You are not asked to teach a class or join a committee, only to look at one company and tell the truth about what you see." data-ko="만 60세 이상, 15년 이상의 운영 경험, 한 달 네 시간에서 여섯 시간. 강의나 위원회가 아니라 한 회사를 함께 보고 본 것을 솔직하게 말해 주시면 됩니다.">Sixty or over, fifteen or more years of operating responsibility, and four to six hours a month. You are not asked to teach a class or join a committee, only to look at one company and tell the truth about what you see.</p>
-        <a class="btn primary" data-form="senior" href="mailto:nissimworks@gmail.com?subject=Hansu%20Project%20%C2%B7%20Senior%20executive%20interest" data-en="Write to us" data-ko="참여 문의하기">Write to us</a>
-      </article>
-      <article class="card">
-        <h3 data-en="Founders" data-ko="창업가">Founders</h3>
-        <div class="kr">한수 창업가</div>
-        <p data-en="Twenty to forty-five, pre-seed to Series A, registered in Busan or about to be. You have a real decision in front of you in the next three months and will show up twice a month. Korean or foreign, both welcome." data-ko="만 20세에서 45세, 예비창업에서 시리즈A 단계, 부산에 등록했거나 곧 등록할 창업자. 앞으로 3개월 안에 결정해야 할 일이 있고, 한 달에 두 번 만날 수 있어야 합니다. 내국인과 외국인 모두 환영합니다.">Twenty to forty-five, pre-seed to Series A, registered in Busan or about to be. You have a real decision in front of you in the next three months and will show up twice a month. Korean or foreign, both welcome.</p>
-        <a class="btn primary" data-form="founder" href="mailto:nissimworks@gmail.com?subject=Hansu%20Project%20%C2%B7%20Founder%20application" data-en="Apply now" data-ko="참여 신청하기">Apply now</a>
-      </article>
-      <article class="card">
-        <h3 data-en="Institutions and companies" data-ko="기관·기업 파트너">Institutions and companies</h3>
-        <div class="kr">기관·기업 파트너</div>
-        <p data-en="Space, a program budget, a sponsorship, or participants: each one changes what the first cohort can do. The pilot ask is one host institution, one co-host for cohort space, and two named sponsors." data-ko="공간, 사업 예산, 후원, 참여자 연계. 어느 하나도 첫 기수를 바꿉니다. 시범 사업의 요청은 주관 기관 하나, 기수 공간을 맡아 줄 공동 주관 하나, 이름을 걸 후원사 두 곳입니다.">Space, a program budget, a sponsorship, or participants: each one changes what the first cohort can do. The pilot ask is one host institution, one co-host for cohort space, and two named sponsors.</p>
-        <a class="btn ghost" data-form="partner" href="mailto:nissimworks@gmail.com?subject=Hansu%20Project%20%C2%B7%20Partnership%20enquiry" data-en="Start a conversation" data-ko="협력 문의하기">Start a conversation</a>
-      </article>
+<section class="deep tight" id="founding">
+  <div class="wrap split">
+    <div>
+      <span class="eyebrow"><span data-en="Where we are" data-ko="지금의 위치">Where we are</span></span>
+      <h2 data-en="Small, and honest about it" data-ko="작게 시작합니다. 있는 그대로 말씀드립니다.">Small, and honest about it</h2>
+      <p data-en="한수 프로젝트 is at its founding stage. One person runs it today. The founding circle has three seats for senior executives, and two of them are open. The first full cohort follows the pilot. We will not describe more than that until it exists." data-ko="한수 프로젝트는 아직 창립 단계입니다. 지금 이 일을 하는 사람은 한 명입니다. 창립 서클은 선배 경영인 자리 세 개로 시작하며, 두 자리가 비어 있습니다. 정식 1기는 시범 운영 뒤에 시작합니다. 없는 것은 없다고 말씀드립니다.">한수 프로젝트 is at its founding stage. One person runs it today. The founding circle has three seats for senior executives, and two of them are open. The first full cohort follows the pilot. We will not describe more than that until it exists.</p>
     </div>
-    <div class="note-line">
-      <span><b data-en="A note on the buttons." data-ko="버튼 안내.">A note on the buttons.</b>
-      <span data-en="Each one opens your own mail app with a short message already written, so nothing is sent until you send it. If your phone has no mail app set up, write to nissimworks@gmail.com directly." data-ko="버튼을 누르면 메일 앱에 짧은 글이 미리 채워집니다. 보내기 전까지는 아무것도 전송되지 않습니다. 휴대전화에 메일 앱이 없다면 nissimworks@gmail.com 으로 바로 보내 주십시오.">Each one opens your own mail app with a short message already written, so nothing is sent until you send it. If your phone has no mail app set up, write to nissimworks@gmail.com directly.</span></span>
+    <div style="align-self:center;justify-self:end">
+      <a class="btn" style="background:var(--cream);color:var(--jade-deep)" href="seniors.html" data-en="Read about the founding circle" data-ko="창립 서클 안내 보기">Read about the founding circle</a>
     </div>
   </div>
 </section>
 
-<section class="alt" id="faq">
-  <div class="wrap" style="max-width:900px">
-    <span class="eyebrow" data-en="Questions" data-ko="자주 묻는 질문">Questions</span>
-    <h2 data-en="Short answers" data-ko="짧은 답변">Short answers</h2>
-    <div style="margin-top:24px">
-      <details>
-        <summary data-en="Does it cost anything?" data-ko="비용이 있나요?">Does it cost anything?</summary>
-        <p data-en="No. Nothing is charged to the founder or the senior executive, no equity is taken, and no money passes between the two of them. At the founding stage the running cost is paid by Nissim Work alone, and we will tell you exactly who funds the program before you commit." data-ko="없습니다. 창업자와 선배 경영인 모두에게 비용을 받지 않고, 지분도 요구하지 않으며, 두 사람 사이에 금전이 오가지 않습니다. 창립 단계인 지금은 운영 비용을 닛심워크가 단독으로 부담하며, 참여를 결정하시기 전에 누가 사업비를 대는지 정확히 말씀드립니다.">No. Nothing is charged to the founder or the senior executive, no equity is taken, and no money passes between the two of them. At the founding stage the running cost is paid by Nissim Work alone, and we will tell you exactly who funds the program before you commit.</p>
-      </details>
-      <details>
-        <summary data-en="Does it run in English?" data-ko="영어로도 진행되나요?">Does it run in English?</summary>
-        <p data-en="Yes. Sessions run in Korean or English, and foreign founders in Busan are matched the same way as Korean founders. The navigator tool is bilingual." data-ko="그렇습니다. 세션은 한국어 또는 영어로 진행하며, 부산의 외국인 창업자도 내국인 창업자와 같은 방식으로 연결합니다. 내비게이터 도구는 한국어와 영어를 함께 지원합니다.">Yes. Sessions run in Korean or English, and foreign founders in Busan are matched the same way as Korean founders. The navigator tool is bilingual.</p>
-      </details>
-      <details>
-        <summary data-en="Who qualifies as a senior executive?" data-ko="선배 경영인의 자격은 무엇인가요?">Who qualifies as a senior executive?</summary>
-        <p data-en="Sixty or over, retired or semi-retired, with fifteen or more years of operating responsibility: a company you built, a division you ran, an institution you led. Sector matters less than judgment, and we ask for one area where you are genuinely strong and one where you are not." data-ko="만 60세 이상, 은퇴했거나 반은퇴 상태이며, 15년 이상 조직 운영을 맡은 분입니다. 직접 만든 회사, 맡았던 사업부, 이끌었던 기관 모두 해당합니다. 업종보다 판단력이 중요하며, 확실히 강한 분야 하나와 그렇지 않은 분야 하나를 함께 여쭙습니다.">Sixty or over, retired or semi-retired, with fifteen or more years of operating responsibility: a company you built, a division you ran, an institution you led. Sector matters less than judgment, and we ask for one area where you are genuinely strong and one where you are not.</p>
-      </details>
-      <details>
-        <summary data-en="What does the navigator show, and is it current?" data-ko="내비게이터는 무엇을 보여 주며, 최신 정보인가요?">What does the navigator show, and is it current?</summary>
-        <p data-en="Twenty-seven Busan and national programs, with amounts, eligibility, application windows and links. Every figure was checked in November 2026 against the institution's own page, and every card carries its last-checked date. Program dates change each year, so re-check any figure before you quote it." data-ko="부산과 국가 지원사업 27개를 금액, 자격, 신청 기간, 링크와 함께 보여 줍니다. 모든 수치는 2026년 11월에 기관의 원문 페이지에서 확인했고, 카드마다 마지막 확인 날짜를 표시합니다. 사업 일정은 해마다 바뀌므로 인용 전에 다시 확인하십시오.">Twenty-seven Busan and national programs, with amounts, eligibility, application windows and links. Every figure was checked in November 2026 against the institution's own page, and every card carries its last-checked date. Program dates change each year, so re-check any figure before you quote it.</p>
-      </details>
-      <details>
-        <summary data-en="Can I see the full proposal?" data-ko="사업 제안서를 볼 수 있나요?">Can I see the full proposal?</summary>
-        <p data-en="Yes. Write to nissimworks@gmail.com and tell us who you are and what you need. We send the one-pager first, then the full blueprint, the senior executive pack or the founder pack." data-ko="그렇습니다. nissimworks@gmail.com 으로 소속과 필요한 자료를 알려 주십시오. 요약 제안서를 먼저 보내고, 이어서 사업 계획서, 선배 경영인 안내서, 창업가 안내서를 보내 드립니다.">Yes. Write to nissimworks@gmail.com and tell us who you are and what you need. We send the one-pager first, then the full blueprint, the senior executive pack or the founder pack.</p>
-      </details>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer class="site">
   <div class="wrap">
     <div class="fgrid">
       <div class="fbrand">
-        <img src="assets/hansu-logo-tile.png" alt="" width="52" height="52">
+        <img src="assets/hansu-logo-tile.png" alt="" width="54" height="54">
         <div>
           <b>한수 프로젝트 · Hansu Project</b>
           <span data-en="Operated by 닛심워크 (Nissim Work), Busan" data-ko="운영: 닛심워크 (Nissim Work), 부산">Operated by 닛심워크 (Nissim Work), Busan</span>
         </div>
       </div>
       <div class="flinks">
-        <a href="#story" data-en="About" data-ko="소개">About</a>
-        <a href="#program" data-en="Program" data-ko="사업">Program</a>
+        <a href="index.html" data-en="Home" data-ko="홈">Home</a>
+        <a href="founders.html" data-en="Founders" data-ko="창업가">Founders</a>
+        <a href="seniors.html" data-en="Senior executives" data-ko="선배 경영인">Senior executives</a>
+        <a href="about.html" data-en="About us" data-ko="소개">About us</a>
         <a href="navigator.html" data-en="Navigator" data-ko="내비게이터">Navigator</a>
-        <a href="#join" data-en="Join" data-ko="참여">Join</a>
+        <a href="join.html" data-en="Join" data-ko="참여">Join</a>
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 닛심워크 (Nissim Work) · 부산광역시 동구 · Busan, Republic of Korea</span>
+      <span>© <span class="year">2026</span> 닛심워크 (Nissim Work) · Busan, Republic of Korea</span>
       <span><a href="mailto:nissimworks@gmail.com">nissimworks@gmail.com</a> · <span data-en="Learn one move." data-ko="한 수 배우다.">Learn one move.</span></span>
     </div>
   </div>
 </footer>
 
-<script>
-(function () {
-  "use strict";
-  var KEY = "hansu.lang";
-  var MAIL_TO = "nissimworks@gmail.com";
-  var FORMS = {
-    senior: {
-      en: { s: "Hansu Project · Senior executive interest",
-            b: "Hello, I would like to join Hansu Project as a senior executive.\n\nName:\nPhone:\nMost recent role (company, title, years):\nArea of strength:\nBest times to talk:\n\nThank you." },
-      ko: { s: "한수 프로젝트 · 선배 경영인 참여 문의",
-            b: "안녕하세요, 한수 프로젝트에 선배 경영인으로 참여하고 싶습니다.\n\n성함:\n연락처:\n최근 경력(회사, 직책, 기간):\n전문 분야:\n가능한 시간대:\n\n감사합니다." }
-    },
-    founder: {
-      en: { s: "Hansu Project · Founder application",
-            b: "Hello, I would like to apply to Hansu Project as a founder.\n\nName:\nCompany:\nStage (pre-seed, seed, Series A):\nBase in Busan:\nThe problem in one line:\nThe decision in front of you now:\n\nThank you." },
-      ko: { s: "한수 프로젝트 · 창업가 참여 신청",
-            b: "안녕하세요, 한수 프로젝트에 창업가로 참여하고 싶습니다.\n\n성함:\n회사명:\n단계(예: 예비창업, 시드, 시리즈A):\n소재지:\n해결하려는 문제 한 줄:\n지금 결정해야 하는 것:\n\n감사합니다." }
-    },
-    partner: {
-      en: { s: "Hansu Project · Partnership enquiry",
-            b: "Hello, we would like to work with Hansu Project.\n\nOrganisation:\nContact name and title:\nPhone or email:\nWhat we can offer (space, programme budget, sponsorship, participants):\n\nThank you." },
-      ko: { s: "한수 프로젝트 · 기관·기업 협력 문의",
-            b: "안녕하세요, 한수 프로젝트와 협력하고 싶습니다.\n\n기관·기업명:\n담당자 성함과 직함:\n연락처:\n협력 방식(공간, 사업 예산, 후원, 참여자 연계):\n\n감사합니다." }
-    }
-  };
-
-  function mailto(kind, lang) {
-    var f = FORMS[kind];
-    if (!f) { return "mailto:" + MAIL_TO; }
-    var t = f[lang] || f.en;
-    return "mailto:" + MAIL_TO + "?subject=" + encodeURIComponent(t.s) + "&body=" + encodeURIComponent(t.b);
-  }
-
-  var buttons = document.querySelectorAll(".lang button");
-
-  function apply(lang) {
-    if (lang !== "ko") { lang = "en"; }
-    document.documentElement.lang = lang;
-    var nodes = document.querySelectorAll("[data-en][data-ko]");
-    for (var i = 0; i < nodes.length; i++) {
-      var el = nodes[i];
-      var t = el.getAttribute("data-" + lang);
-      if (t === null) { continue; }
-      if (el.hasAttribute("data-html")) { el.innerHTML = t; } else { el.textContent = t; }
-    }
-    var forms = document.querySelectorAll("[data-form]");
-    for (var j = 0; j < forms.length; j++) {
-      forms[j].setAttribute("href", mailto(forms[j].getAttribute("data-form"), lang));
-    }
-    for (var k = 0; k < buttons.length; k++) {
-      var on = buttons[k].getAttribute("data-lang") === lang;
-      buttons[k].className = on ? "on" : "";
-      buttons[k].setAttribute("aria-pressed", on ? "true" : "false");
-    }
-    try { localStorage.setItem(KEY, lang); } catch (e) {}
-  }
-
-  function initial() {
-    var fromUrl = null;
-    try {
-      var m = /[?&]lang=(en|ko)\b/.exec(window.location.search);
-      if (m) { fromUrl = m[1]; }
-    } catch (e) {}
-    if (fromUrl) { return fromUrl; }
-    try {
-      var saved = localStorage.getItem(KEY);
-      if (saved === "ko" || saved === "en") { return saved; }
-    } catch (e) {}
-    return "en";
-  }
-
-  for (var b = 0; b < buttons.length; b++) {
-    buttons[b].addEventListener("click", function () {
-      apply(this.getAttribute("data-lang"));
-    });
-  }
-
-  apply(initial());
-
-  // keep the year in the footer honest
-  var y = new Date().getFullYear();
-  if (y > 2026) {
-    var legal = document.querySelector(".legal span");
-    if (legal) { legal.textContent = legal.textContent.replace("2026", String(y)); }
-  }
-})();
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>
