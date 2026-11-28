@@ -303,3 +303,6 @@ footer.site{background:#fff;border-top:1px solid var(--line);padding:46px 0 56px
 /* one line under an application button: what the email will ask */
 .cta-note{font-size:13.5px;color:var(--muted);margin:14px 0 0;max-width:38em;line-height:1.6}
 .path .cta-note{font-size:13px;margin:12px 0 0;max-width:none}
+
+/* a four-up stat strip is too tight inside a text column: two by two */
+.split .stats{grid-template-columns:repeat(2,1fr)}
