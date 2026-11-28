@@ -17,7 +17,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;scroll-padding-top:86px}
 body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
-img,video{max-width:100%;display:block}
+img,video{max-width:100%;height:auto;display:block}
 a{color:var(--jade-deep);text-decoration:none}
 a:hover{color:var(--plum)}
 h1,h2,h3,h4,.serif{font-family:var(--serif);font-weight:700;line-height:1.24;letter-spacing:-.01em}
@@ -93,20 +93,20 @@ html[lang="en"] .ko-block{display:block}
 .btn.small{padding:11px 18px;font-size:14px}
 .arrow{font-weight:700}
 
-.hero-art{position:relative;justify-self:center;width:100%;max-width:480px}
+.hero-art{justify-self:center;width:100%;max-width:480px;align-self:start;position:sticky;top:96px}
 .hero-art .frame{border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#fff}
 .hero-art .frame img{width:100%;height:auto}
 .hero-art .badge{position:absolute;left:-16px;bottom:-18px;width:106px;height:106px;border-radius:50%;background:var(--cream);
   border:1px solid var(--line);box-shadow:0 12px 30px rgba(28,27,26,.14);display:grid;place-items:center}
 .hero-art .badge img{width:86px;height:86px}
-.hero-art figcaption{margin-top:34px;font-size:12.5px;color:var(--faint);line-height:1.5;max-width:34em}
+.hero-art figcaption{margin-top:46px;font-size:12.5px;color:var(--faint);line-height:1.5;max-width:34em}
 
 /* compact hero for inner pages */
 .page-hero{padding:clamp(38px,5vw,68px) 0 clamp(28px,4vw,48px)}
 .page-hero .hgrid{grid-template-columns:1.35fr .65fr;align-items:end}
 .page-hero h1{font-size:clamp(32px,4vw,50px)}
 .page-hero .lede{margin-top:22px}
-.page-hero .side{justify-self:end;align-self:end;text-align:right;color:var(--muted);font-size:14px;line-height:1.7;max-width:20em}
+.page-hero .side{justify-self:end;align-self:end;text-align:left;color:var(--muted);font-size:14.5px;line-height:1.75;max-width:21em;border-left:2px solid var(--line);padding-left:20px}
 .page-hero .side b{display:block;font-family:var(--serif);color:var(--jade);font-size:19px;margin-bottom:4px}
 
 /* ---------- sections ---------- */
@@ -225,6 +225,22 @@ details p + p{margin-top:10px}
 .note-line{display:flex;gap:12px;align-items:flex-start;background:var(--plum-tint);border:1px solid #EBCBD8;border-radius:14px;padding:16px 20px;margin-top:26px;font-size:14px;color:#5E2C41}
 .note-line b{color:var(--plum)}
 
+/* seniors: calmer measure, larger type */
+body.seniors{font-size:18px}
+body.seniors .lede{font-size:clamp(18px,1.9vw,21px);line-height:1.75}
+body.seniors .prose p{font-size:18px;line-height:1.82}
+body.seniors .sub{font-size:19px;line-height:1.75}
+body.seniors .checks li{font-size:17.5px;line-height:1.78;margin-bottom:16px}
+body.seniors details summary{font-size:18px}
+body.seniors details p{font-size:17px;line-height:1.8}
+body.seniors .card p{font-size:16.5px;line-height:1.75}
+body.seniors table{font-size:16px}
+.quickline{display:flex;flex-wrap:wrap;gap:8px 30px;margin:28px 0 0;padding:18px 0 0;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px;line-height:1.6}
+.quickline b{color:var(--jade-deep);font-weight:700}
+.figure-center{max-width:620px;margin:46px auto 0}
+.figure-center img{width:100%;height:auto}
+.figure-center figcaption{text-align:center;margin-top:16px}
+
 /* footer */
 footer.site{background:#fff;border-top:1px solid var(--line);padding:46px 0 56px;font-size:14px;color:var(--muted)}
 .fgrid{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:flex-start}
@@ -244,8 +260,8 @@ footer.site{background:#fff;border-top:1px solid var(--line);padding:46px 0 56px
 }
 @media (max-width:960px){
   .hgrid,.page-hero .hgrid{grid-template-columns:1fr}
-  .hero-art{order:-1;max-width:440px}
-  .page-hero .side{justify-self:start;text-align:left;margin-top:18px}
+  .hero-art{order:-1;max-width:440px;position:static}
+  .page-hero .side{justify-self:start;text-align:left;margin-top:22px;border-left:0;padding-left:0}
   .split,.split.wide-left{grid-template-columns:1fr}
   .cards.three{grid-template-columns:1fr 1fr}
   .band{grid-template-columns:1fr}
@@ -275,4 +291,9 @@ footer.site{background:#fff;border-top:1px solid var(--line);padding:46px 0 56px
   header.site,footer.site,.cta,.path .go{display:none}
   body{background:#fff}
   section{padding:18px 0}
+}
+
+/* figures beside a text column */
+@media (max-width:960px){
+  .split figure{max-width:520px;margin-left:auto;margin-right:auto}
 }

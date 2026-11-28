@@ -13,7 +13,7 @@ months at no cost, plus a free bilingual Startup Support Navigator.
 | `seniors.html` | For senior executives. The ask, the time, the hard questions, the founding circle. |
 | `about.html` | About Nofar Lupo: who she is and why she convenes the table. |
 | `join.html` | The fork: apply as a founder, or join the founding circle. |
-| `navigator.html` | The Startup Support Navigator. Self contained, client side, stores nothing. |
+| `navigator.html` | The Free Startup Support Navigator. Reached from the Founders page, not from the main navigation. Self contained, client side, stores nothing. |
 
 `assets/` holds the logo files, two illustrations, the brand film and its poster, the
 social share card, and the shared stylesheet and script.

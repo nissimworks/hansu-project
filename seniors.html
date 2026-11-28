@@ -23,7 +23,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&amp;family=Noto+Serif+KR:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 </head>
-<body>
+<body class="seniors">
 <a class="skip" href="#main" data-en="Skip to content" data-ko="본문으로 건너뛰기">Skip to content</a>
 
 <header class="site">
@@ -37,7 +37,6 @@
       <a href="founders.html" data-en="Founders" data-ko="창업가">Founders</a>
       <a href="seniors.html" aria-current="page" data-en="Senior executives" data-ko="선배 경영인">Senior executives</a>
       <a href="about.html" data-en="About us" data-ko="소개">About us</a>
-      <a href="navigator.html" data-en="Navigator" data-ko="내비게이터">Navigator</a>
       <a class="join-link" href="join.html" data-en="Join" data-ko="참여">Join</a>
     </nav>
     <div class="lang" role="group" aria-label="Language">
@@ -50,8 +49,7 @@
 <main id="main">
 
 <section class="page-hero board-bg">
-  <div class="wrap hgrid">
-    <div>
+  <div class="wrap" style="max-width:900px">
       <p class="kicker"><span class="stones"><i></i><i></i></span><span data-en="For senior executives" data-ko="선배 경영인을 위하여">For senior executives</span></p>
       <h1 data-en="You built your career here. Help someone build theirs here." data-ko="이곳에서 경력을 쌓으셨습니다. 이제 누군가가 이곳에서 자기 경력을 쌓도록 도와주십시오.">You built your career here. Help someone build theirs here.</h1>
       <span class="h1-ko" aria-hidden="true">이곳에서 경력을 쌓으셨습니다. 이제 누군가가 이곳에서 자기 경력을 쌓도록 도와주십시오.</span>
@@ -60,17 +58,17 @@
         <a class="btn primary" href="join.html#senior" data-en="Join the founding circle" data-ko="창립 서클에 참여하기">Join the founding circle</a>
         <a class="btn ghost" href="#questions" data-en="Read the hard questions" data-ko="어려운 질문부터 보기">Read the hard questions</a>
       </div>
-    </div>
-    <div class="side">
-      <b data-en="At a glance" data-ko="한눈에">At a glance</b>
-      <span data-en="Four to six hours a month · six months · no fee · no investment · no name in public without your permission" data-ko="한 달 네 시간에서 여섯 시간 · 6개월 · 회비 없음 · 투자 없음 · 허락 없이 성함을 공개하지 않음">Four to six hours a month · six months · no fee · no investment · no name in public without your permission</span>
+    <div class="quickline">
+      <span><b data-en="6 months" data-ko="6개월">6 months</b> <span data-en="one founder" data-ko="창업자 한 사람">one founder</span></span>
+      <span><b data-en="4 to 6 hours" data-ko="한 달 4~6시간">4 to 6 hours</b> <span data-en="a month" data-ko="의 시간">a month</span></span>
+      <span><b data-en="No fee" data-ko="회비 없음">No fee</b> <span data-en="no investment" data-ko="투자 없음">no investment</span></span>
+      <span><b data-en="Your name" data-ko="성함">Your name</b> <span data-en="in public only with written permission" data-ko="은 서면 허락 없이 공개하지 않음">in public only with written permission</span></span>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="split">
+  <div class="wrap" style="max-width:820px">
       <div class="prose">
         <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="The silence" data-ko="은퇴 뒤의 시간">The silence</span></span>
         <h2 data-en="The knowledge does not retire. The room does." data-ko="지식은 은퇴하지 않습니다. 그 지식이 쓰이던 자리가 사라질 뿐입니다.">The knowledge does not retire. The room does.</h2>
@@ -81,18 +79,15 @@
           <span data-en="You are not asked to teach. You are asked to look at one company with a founder and tell the truth about what you see." data-ko="가르치라는 부탁이 아닙니다. 창업자와 함께 회사 하나를 들여다보고, 보이는 것을 솔직하게 말씀해 달라는 부탁입니다.">You are not asked to teach. You are asked to look at one company with a founder and tell the truth about what you see.</span>
         </blockquote>
       </div>
-      <figure>
+      <figure class="figure-center">
         <img src="assets/story-two-panels.jpg" alt="A retired executive alone with a baduk board at home, and a founder alone at a laptop late at night" width="1024" height="1024">
         <figcaption data-en="Two rooms in the same city, November 2026. 한수 프로젝트 puts them at one table." data-ko="같은 도시의 두 방, 2026년 11월. 한수 프로젝트는 두 사람을 한 바둑판에 앉힙니다.">Two rooms in the same city, November 2026. 한수 프로젝트 puts them at one table.</figcaption>
       </figure>
-    </div>
   </div>
 </section>
 
 <section class="alt">
-  <div class="wrap">
-    <div class="split wide-left">
-      <div>
+  <div class="wrap" style="max-width:820px">
         <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="What we ask of you" data-ko="부탁드리는 일">What we ask of you</span></span>
         <h2 data-en="Four hours a month. The rest is our work." data-ko="한 달 네 시간. 나머지는 저희가 합니다.">Four hours a month. The rest is our work.</h2>
         <p class="sub" data-en="You are not asked to run a class, write a report or join a committee. This is what the relationship actually asks of you." data-ko="강의를 하시거나 보고서를 쓰시거나 위원회에 참여하실 필요는 없습니다. 관계가 실제로 부탁드리는 것은 다음 다섯 가지입니다.">You are not asked to run a class, write a report or join a committee. This is what the relationship actually asks of you.</p>
@@ -103,8 +98,7 @@
           <li data-en="Open one door when it is real. A buyer, a former colleague, a supplier you trust." data-ko="실제로 열 수 있는 문 하나를 열어 주십시오. 구매 담당자, 오래 아는 동료, 신뢰하는 공급사.">Open one door when it is real. A buyer, a former colleague, a supplier you trust.</li>
           <li data-en="Stay for six months. The value is in the memory, not the single meeting." data-ko="6개월을 지켜 주십시오. 가치는 한 번의 만남이 아니라 기억에 있습니다.">Stay for six months. The value is in the memory, not the single meeting.</li>
         </ul>
-      </div>
-      <div class="stop" style="margin-top:56px">
+      <div class="stop" style="margin-top:40px">
         <h4 data-en="What you never do" data-ko="하지 않으시는 일">What you never do</h4>
         <ul>
           <li data-en="No money changes hands, in either direction. Ever." data-ko="어떤 방향으로도 금전 거래가 없습니다.">No money changes hands, in either direction. Ever.</li>
@@ -114,7 +108,6 @@
           <li data-en="No confidential information leaves the pair without written consent." data-ko="서면 동의 없이 두 사람 사이의 정보가 밖으로 나가지 않습니다.">No confidential information leaves the pair without written consent.</li>
         </ul>
       </div>
-    </div>
   </div>
 </section>
 
@@ -146,7 +139,7 @@
     <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="What you get back" data-ko="돌아오는 것">What you get back</span></span>
     <h2 data-en="Being useful again, in a form you can keep" data-ko="다시 쓸모 있는 사람이 되는 일, 오래 갈 수 있는 형태로">Being useful again, in a form you can keep</h2>
     <p class="sub" data-en="The strongest reason to do this is not charity. It is having a role that uses what you spent thirty years learning, with people who are still deciding." data-ko="이 일을 하시는 가장 큰 이유는 자선이 아닙니다. 서른 해 동안 익히신 것을 쓰는 자리가 생기고, 그 자리에 아직 결정을 내리는 사람들이 있다는 것입니다.">The strongest reason to do this is not charity. It is having a role that uses what you spent thirty years learning, with people who are still deciding.</p>
-    <div class="cards three">
+    <div class="cards two">
       <div class="card">
         <h3 data-en="A structure" data-ko="구조">A structure</h3>
         <p data-en="Your experience becomes usable, instead of another vague offer to help. We make the introduction, hold the schedule and keep the record." data-ko="막연한 도움 제안이 아니라, 경험을 실제로 쓸 수 있게 만드는 구조입니다. 소개하고, 일정을 잡고, 기록을 남깁니다.">Your experience becomes usable, instead of another vague offer to help. We make the introduction, hold the schedule and keep the record.</p>
@@ -176,14 +169,11 @@
 </section>
 
 <section>
-  <div class="wrap">
-    <div class="split">
-      <div>
+  <div class="wrap" style="max-width:900px">
         <span class="eyebrow"><span class="stones"><i></i><i></i></span><span data-en="Who we are looking for" data-ko="찾고 있는 분">Who we are looking for</span></span>
         <h2 data-en="Judgement, not a job title" data-ko="직함이 아니라 판단력">Judgement, not a job title</h2>
         <p data-en="A company you built, a division you ran, an institution you led. Sector matters less than how you decide, and how honestly you can talk about what you got wrong." data-ko="직접 세운 회사, 맡았던 사업부, 이끌었던 기관. 업종보다 중요한 것은 어떻게 판단하는지, 그리고 잘못한 일을 얼마나 솔직하게 말씀하실 수 있는지입니다.">A company you built, a division you ran, an institution you led. Sector matters less than how you decide, and how honestly you can talk about what you got wrong.</p>
-      </div>
-      <div class="tablewrap">
+      <div class="tablewrap" style="margin-top:30px">
         <table>
           <thead>
             <tr><th data-en="What matters" data-ko="중요하게 보는 것">What matters</th><th data-en="What does not" data-ko="중요하지 않은 것">What does not</th></tr>
@@ -197,7 +187,6 @@
           </tbody>
         </table>
       </div>
-    </div>
   </div>
 </section>
 
@@ -283,14 +272,12 @@
 </section>
 
 <section class="deep">
-  <div class="wrap split">
-    <div>
+  <div class="wrap" style="max-width:860px">
       <span class="eyebrow"><span data-en="The founding circle" data-ko="창립 서클">The founding circle</span></span>
       <h2 data-en="Two seats are open" data-ko="두 자리가 비어 있습니다">Two seats are open</h2>
       <p data-en="The founding circle is three senior executives who help set the standard for everyone who comes after them. Two seats are open today. If you have four hours a month and something to pass on, write to us." data-ko="창립 서클은 이후에 오는 모든 분들의 기준을 함께 세우는 선배 경영인 세 분입니다. 지금 두 자리가 비어 있습니다. 한 달 네 시간을 내실 수 있고 물려주실 것이 있다면 편지를 주십시오.">The founding circle is three senior executives who help set the standard for everyone who comes after them. Two seats are open today. If you have four hours a month and something to pass on, write to us.</p>
       <p style="color:#C7DDD5;font-size:14px" data-en="Tell us what you ran and for how long, two areas where you are genuinely strong and one where you are not, and two times next week for a twenty-minute call." data-ko="무엇을 얼마 동안 운영하셨는지, 실제로 강한 두 분야와 솔직히 약한 한 분야, 그리고 다음 주 20분 통화가 가능한 시간 두 가지를 알려 주십시오.">Tell us what you ran and for how long, two areas where you are genuinely strong and one where you are not, and two times next week for a twenty-minute call.</p>
-    </div>
-    <div style="align-self:center;justify-self:end">
+    <div style="margin-top:30px">
       <a class="btn" style="background:var(--cream);color:var(--jade-deep);font-size:16px;padding:18px 28px" data-form="senior" href="mailto:nissimworks@gmail.com?subject=Hansu%20Project%20%C2%B7%20Founding%20circle" data-en="Write about the founding circle" data-ko="창립 서클 문의하기">Write about the founding circle</a>
       <p style="color:#C7DDD5;font-size:12.5px;margin-top:14px;max-width:20em" data-en="This opens your own mail app with a short note already written. Nothing is sent until you send it." data-ko="메일 앱에 짧은 글이 미리 채워집니다. 보내기 전까지는 아무것도 전송되지 않습니다.">This opens your own mail app with a short note already written. Nothing is sent until you send it.</p>
     </div>
@@ -314,8 +301,7 @@
         <a href="founders.html" data-en="Founders" data-ko="창업가">Founders</a>
         <a href="seniors.html" data-en="Senior executives" data-ko="선배 경영인">Senior executives</a>
         <a href="about.html" data-en="About us" data-ko="소개">About us</a>
-        <a href="navigator.html" data-en="Navigator" data-ko="내비게이터">Navigator</a>
-        <a href="join.html" data-en="Join" data-ko="참여">Join</a>
+          <a href="join.html" data-en="Join" data-ko="참여">Join</a>
       </div>
     </div>
     <div class="legal">
