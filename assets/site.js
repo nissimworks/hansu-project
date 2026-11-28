@@ -1,41 +1,54 @@
 /* 한수 프로젝트 · Hansu Project
    One language switch for every page. English is the default; Korean is one press away.
-   No tracking, no cookies, nothing sent anywhere. */
+   The two application buttons open the reader's own mail app with the questions already
+   written into the message. Nothing is sent anywhere. */
 (function () {
   "use strict";
   var KEY = "hansu.lang";
   var MAIL_TO = "nissimworks@gmail.com";
 
   var FORMS = {
-    senior: {
-      en: {
-        s: "Hansu Project · Founding circle",
-        b: "Hello,\n\nI would like to talk about the founding circle of Hansu Project.\n\nName:\nWhat I ran (company or institution, role, years):\nTwo areas where I am strong:\nOne area where I am not:\nTwo times next week for a 20 minute call:\n\nThank you.\n"
-      },
-      ko: {
-        s: "한수 프로젝트 · 창립 서클 문의",
-        b: "안녕하십니까.\n\n한수 프로젝트 창립 서클에 대해 이야기하고 싶습니다.\n\n성함:\n운영하신 조직(회사 또는 기관, 직책, 기간):\n강점이 있는 두 분야:\n강점이 아닌 한 분야:\n다음 주 20분 통화가 가능한 시간 두 가지:\n\n감사합니다.\n"
-      }
-    },
     founder: {
-      en: {
-        s: "Hansu Project · Founder application",
-        b: "Hello,\n\nI would like to apply to Hansu Project as a founder.\n\nName:\nCompany:\nWhat the company does, in one line:\nWho pays:\nHow long you have been running:\nThe next three decisions:\nTwo times next week for a 20 minute call:\n\nThank you.\n"
-      },
-      ko: {
-        s: "한수 프로젝트 · 창업가 참여 신청",
-        b: "안녕하십니까.\n\n한수 프로젝트에 창업가로 참여하고 싶습니다.\n\n성함:\n회사명:\n회사가 하는 일 한 줄:\n비용을 내는 고객:\n운영 기간:\n앞으로의 세 가지 결정:\n다음 주 20분 통화가 가능한 시간 두 가지:\n\n감사합니다.\n"
-      }
+      s: "한수 프로젝트 · 창업가 신청 (Hansu Project founder application)",
+      b: "한수 프로젝트 · 창업가 신청\n" +
+         "Hansu Project · Founder application\n\n" +
+         "[About you]\n" +
+         "성함:\n" +
+         "회사명:\n" +
+         "업종 (한 단어로 충분합니다):\n" +
+         "단계 (아이디어 / 초기 고객 / 성장):\n\n" +
+         "[The company]\n" +
+         "한 줄 소개: 무엇을 하고 있는지\n\n" +
+         "[The decision]\n" +
+         "지금 가장 막혀 있는 결정 하나:\n" +
+         "어떤 문을 열고 싶은지 (예: 은행, 병원 구매팀, 제조사):\n\n" +
+         "[Time]\n" +
+         "이번 주에 가능한 통화 시간:\n\n" +
+         "감사합니다.\n"
+    },
+    senior: {
+      s: "한수 프로젝트 · 창립 서클 문의 (Hansu Project founding circle)",
+      b: "한수 프로젝트 · 창립 서클 문의\n" +
+         "Hansu Project · Founding circle\n\n" +
+         "[About you]\n" +
+         "성함:\n" +
+         "마지막 직책과 업종:\n\n" +
+         "[Experience]\n" +
+         "가장 자신 있는 두 영역:\n" +
+         "최근 5년 안에 실제로 내린 큰 결정 하나:\n\n" +
+         "[Time and people]\n" +
+         "한 달에 가능한 시간:\n" +
+         "소개해 주실 수 있는 분 두 분 (한 분은 직접 이끄신 분):\n\n" +
+         "감사합니다.\n"
     }
   };
 
-  function mailto(kind, lang) {
+  function mailto(kind) {
     var f = FORMS[kind];
     if (!f) { return "mailto:" + MAIL_TO; }
-    var t = f[lang] || f.en;
     return "mailto:" + MAIL_TO +
-      "?subject=" + encodeURIComponent(t.s) +
-      "&body=" + encodeURIComponent(t.b);
+      "?subject=" + encodeURIComponent(f.s) +
+      "&body=" + encodeURIComponent(f.b);
   }
 
   var buttons = document.querySelectorAll(".lang button");
@@ -60,7 +73,7 @@
 
     var forms = document.querySelectorAll("[data-form]");
     for (var j = 0; j < forms.length; j++) {
-      forms[j].setAttribute("href", mailto(forms[j].getAttribute("data-form"), lang));
+      forms[j].setAttribute("href", mailto(forms[j].getAttribute("data-form")));
     }
 
     for (var k = 0; k < buttons.length; k++) {

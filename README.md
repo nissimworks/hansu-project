@@ -37,5 +37,5 @@ https://nissimworks.github.io/hansu-project/
 
 Check that every page returns 200, that the navigation and the film work, and that no
 text claims funding, sponsors, a February 2027 cohort, named partners or staff that do
-not exist. The program today is one person, a founding circle with two open seats, and a
-pilot before the first full cohort. No em dashes anywhere.
+not exist. The program today is a founding circle with two open seats, and a pilot before
+the first full cohort. No em dashes anywhere.
